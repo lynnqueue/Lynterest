@@ -4,54 +4,16 @@
 
 .sessionformbg{
   width: 100%;
-    margin: 0 auto;
-    // margin-top: -20px;
-    height: 800px;
-    display: flex;
-    justify-content: center;
-    // align-items: center;
+  margin: 0 auto;
+  height: 800px;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   height: 100vh;
   display: flex;
   top: 0px;
   background-color: rgba(95, 115, 160, 0.56);
   background-size: cover;
-  -webkit-animation:200s scroll infinite linear;
-  -moz-animation:200s scroll infinite linear;
-  -o-animation:200s scroll infinite linear;
-  -ms-animation:200s scroll infinite linear;
-  animation:200s scroll infinite linear;
-}
-
-@-webkit-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-    transform: translateY(-300px);
-  }
-}
-
-@-moz-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@-o-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@-ms-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
 }
 
 .session-form-modal {
@@ -64,7 +26,6 @@
   border-radius: 8px;
   position: relative;
   text-align: center;
-  width: 440px;
   margin: auto;
   min-height: initial;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px;
@@ -82,16 +43,24 @@
   background: white;
 }
 
+img {
+  border-radius: 2px;
+  padding: 10px;
+  width: 35px;
+}
+
 h3 {
   color: rgb(51,51,51);
-  font-size: 32px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
   letter-spacing: -1.2px;
   margin: 0;
 }
 
-h4 {
+.subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   color: rgb(51,51,51);
   margin: 0px auto 25px;
   width: 270px;
@@ -119,18 +88,19 @@ h4 {
 .session-submit {
   color: white;
   width: 268px;
-  margin-left: 65px;
+  margin: 20px;
   padding: 0px 18px;
   font-size: 15px;
   font-weight: 400;
-  font-family: Roboto;
+  font-family: Arial, sans-serif;
   outline: none;
   box-shadow: none;
   cursor: pointer;
   margin-top: 0px;
+  margin-bottom: 0px;
   background-color: rgb(189, 8, 28);
   border: 0px;
-  height: 36px;
+  height: 30px;
   display: inline-block;
   border-radius: 4px;
 }
@@ -144,6 +114,11 @@ h4 {
 .toggle-link:focus, .toggle-link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.toggle-link {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
 }
 
 

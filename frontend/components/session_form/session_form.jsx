@@ -49,8 +49,9 @@ class SessionForm extends React.Component {
         <div className="session-form-modal">
           <div className="session-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
+              <img src={window.logoUrl} alt="lynterest-logo"/>
               <h3>Welcome to Lynterest</h3>
-              <h4>Find new ideas to try</h4>
+              <span className="subtitle">Find new ideas to try</span>
               <br/>
               <div className="errors">{this.renderErrors()}</div>
               <div className="login-form">
@@ -74,7 +75,6 @@ class SessionForm extends React.Component {
 
                 <input className="session-submit" type="submit" value={this.props.formType === 'login' ? 'Log in' : 'Continue'}/>
               </div>
-              <br/>
               <br/>
               <span className="toggle-link">{this.props.toggle}</span>
             </form>
