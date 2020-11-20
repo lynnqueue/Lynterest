@@ -27,9 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    unless current_user
-      render json: { base: ['invalid credentials'] }, status: 401
-    end
+    redirect_to new_api_session_url unless logged_in?
   end
 
 end

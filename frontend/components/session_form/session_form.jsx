@@ -16,6 +16,10 @@ class SessionForm extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -35,36 +39,47 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const age = <input type="number"
+                  placeholder="Age"
+                  onChange={this.update('age')}
+                  className="login-input"
+                />
     return (
-      <div className="login-form-container">
-        <h3>Welcome to Painterest</h3>
-        <span>Find new ideas to try</span>
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          {this.renderErrors()}
-          <br/>
-          <div className="login-form">
-            <br/>
-            <label>
-              <input type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>
-              <input type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+      <div className="sessionformbg">
+        <div className="session-form-modal">
+          <div className="session-form-container">
+            <form onSubmit={this.handleSubmit} className="login-form-box">
+              <h3>Welcome to Lynterest</h3>
+              <h4>Find new ideas to try</h4>
+              <br/>
+              <div className="errors">{this.renderErrors()}</div>
+              <div className="login-form">
+                <br/>
+                  <input type="text"
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="login-input"
+                  />
+                <br/>
+                  <input type="password"
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="login-input"
+                  />
+                <br/>
+                {this.props.formType === 'signup' ? age : null}
+                <br/>
+
+                <input className="session-submit" type="submit" value={this.props.formType === 'login' ? 'Log in' : 'Continue'}/>
+              </div>
+              <br/>
+              <br/>
+              <span className="toggle-link">{this.props.toggle}</span>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     );
   }
