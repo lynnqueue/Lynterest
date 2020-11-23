@@ -1,11 +1,12 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      age: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -39,11 +40,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const age = <input type="number"
-                  placeholder="Age"
-                  onChange={this.update('age')}
-                  className="login-input"
-                />
     return (
       <div className="sessionformbg">
         <div className="session-form-modal">
@@ -70,10 +66,14 @@ class SessionForm extends React.Component {
                     className="login-input"
                   />
                 <br/>
-                {this.props.formType === 'signup' ? age : null}
+                  <input type="number"
+                    placeholder="Age"
+                    onChange={this.update('age')}
+                    className="login-input"
+                  />
                 <br/>
 
-                <input className="session-submit" type="submit" value={this.props.formType === 'login' ? 'Log in' : 'Continue'}/>
+                <input className="session-submit" type="submit" value={this.props.formType}/>
               </div>
               <br/>
               <span className="toggle-link">{this.props.toggle}</span>
@@ -85,4 +85,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default SignupForm;
