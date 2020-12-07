@@ -1,18 +1,23 @@
+
 class User < ApplicationRecord
+  validates :email, uniqueness: true
+  validates :password, length: { minimum: 6 }, allow_nil: true
+  # validates :first_name, :last_name, length: { maximum: 30 }
+  # validates :location, length: { maximum: 50 }
+  after_initialize :ensure_session_token, :parse_email
 
   attr_reader :password
 
-  validates :email, :password_digest, :session_token, presence: true
-  validates :email, uniqueness: true
-  validates :password, length: { minimum: 6 }, allow_nil: true
-  validates :age, numericality: { only_integer: true, greater_than: 13 }, presence: true 
-
-  after_initialize :ensure_session_token
+  has_one_attached :photo
+  has_many :boards
+  has_many :pins
+  has_many :boards_pins,
+    through: :boards,
+    source: :boards_pins
 
   def self.find_by_credentials(email, password)
-    user = User.find_by(email: email)
-    return nil unless user
-    user.is_password?(password) ? user : nil
+    user = User.find_by_email(email)
+    user && user.is_password?(password) ? user : nil
   end
 
   def password=(password)
@@ -21,19 +26,25 @@ class User < ApplicationRecord
   end
 
   def is_password?(password)
-    BCrypt::Password.new(self.password_digest).is_password?(password)
+    BCrypt::Password.new(self.password_digest) == password
   end
 
   def reset_session_token!
-    self.session_token = SecureRandom.urlsafe_base64
-    self.save
+    self.update!(session_token: generate_session_token)
     self.session_token
   end
 
   private
+  def generate_session_token
+    SecureRandom.urlsafe_base64
+  end
+
   def ensure_session_token
-    self.session_token ||= SecureRandom.urlsafe_base64
+    self.session_token ||= generate_session_token
+  end
+
+  def parse_email
+    self.username ||= self.email.split("@")[0]
   end
 
 end
-

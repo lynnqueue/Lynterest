@@ -1,49 +1,51 @@
 class Api::PinsController < ApplicationController
-    def index
-        @pins = Pin.all 
-        render "api/pins/index"
-    end 
 
-    def show
-        @pin = Pin.find(params[:id])
-        render "api/pins/show"
-    end 
+  # before_action :require_login
+  def create
+    @pin = Pin.new(pin_params)
+    @pin.user_id = current_user.id
+    # @pin.photo.attach(pin_params[:photo])
+    
+    if @pin.save
+      render "api/pins/show"
+    else
+      render json: @pin.errors.full_messages, status: 422
+    end
+  end
+  
+  def show
+    @pin = Pin.find(params[:id])
+    render "api/pins/show"
+  end
+  
+  def index
+    @pins = Pin.all
+    render "api/pins/index"
+  end
 
-    def create
-        @pin = Pin.new(pin_params)
-        @pin.user_id = current_user.id
+  def update
+    @pin = current_user.pins.find(params[:id])
 
-        if @pin.save
-            render "api/pins/show"
-        else 
-            render json: @pin.errors.full_messages, status: 422
-        end 
-    end 
+    if @pin.update(pin_params)
+      render "api/pins/show"
+    else
+      render json: ["Can't edit this pin!"], status: 401
+    end
+  end
 
-    def update
-        @pin = current_user.pins.find(params[:id])
+  def destroy
+    @pin = current_user.pins.find(params[:id])
+    if @pin
+      @pin.destroy
+      render "api/pins/show"
+    else
+      render json: ["Can't delete this pin!"], status: 401
+    end
+  end
 
-        if @pin.update(pin_params)
-            render "api/pins/show"
-        else  
-            render json: ["You can't edit this pin!"], status: 401
-        end 
-    end 
+  private
+  def pin_params
+    params.require(:pin).permit(:id, :title, :description, :url, :photo, :user_id)
+  end
 
-    def destroy
-        @pin = current_user.pins.find(params[:id])
-
-        if !@pin
-            render json: ["You can't delete this pin!"], status: 401            
-        elsif @pin.destroy
-            render "api/pins/show"
-        else
-            render json: ["Oops something's wrong, fail to delete."], status: 404 
-        end
-    end 
-
-    private
-    def pin_params
-        params.require(:pin).permit(:id, :title, :description, :url, :user_id, :image)
-    end 
-end 
+end

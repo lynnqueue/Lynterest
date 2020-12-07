@@ -1,13 +1,23 @@
-export const fetchUsers = () => {
-  return $.ajax({
-    method: "GET",
-    url: "/api/users"
-  });
-};
+// export const fetchAllUsers = () => (
+//   $.ajax({
+//     method: "GET",
+//     url: `/api/users`,
+//   })
+// );
 
-export const fetchUser = id => {
-  return $.ajax({
+export const fetchSingleUser = (id) => (
+  $.ajax({
     method: "GET",
-    url: `/api/users/${id}`
-  });
-};
+    url: `/api/users/${id}`,
+  })
+);
+
+// export const updateUser = (user, id) => (
+//   $.ajax({
+//     method: "PATCH",
+//     url: `/api/users/${id}`,
+//     data: user,
+//     contentType: false,
+//     processData: false
+//   })
+// );
