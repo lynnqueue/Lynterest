@@ -17,7 +17,6 @@ BoardsPins.destroy_all
 # user_id: 1
 user = User.create(
   username: 'aries',
-  age: 20,
   first_name: 'Danny',
   last_name: 'Ocean',
   email: 'd_ocean@gmail.com',
@@ -94,7 +93,6 @@ user.photo.attach(io: file, filename: "download.jpeg")
 Board.create(
   title: "Animals",
   description: "Animal photos",
-  secret: false,
   user_id: 1
 )
 
@@ -102,7 +100,6 @@ Board.create(
 Board.create(
   title: "nature",
   description: "Nature photos",
-  secret: false,
   user_id: 1
 )
 
@@ -110,7 +107,6 @@ Board.create(
 Board.create(
   title: "interiors",
   description: "Interiors photos",
-  secret: false,
   user_id: 1
 )
 
@@ -118,7 +114,6 @@ Board.create(
 Board.create(
   title: "travel",
   description: "travel photos",
-  secret: false,
   user_id: 1
 )
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_073103) do
+ActiveRecord::Schema.define(version: 2020_12_09_213535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,13 +42,12 @@ ActiveRecord::Schema.define(version: 2020_11_30_073103) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "secret", default: false
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
   create_table "boards_pins", force: :cascade do |t|
-    t.integer "board_id", null: false
     t.integer "pin_id", null: false
+    t.integer "board_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id", "pin_id"], name: "index_boards_pins_on_board_id_and_pin_id", unique: true
@@ -68,16 +67,15 @@ ActiveRecord::Schema.define(version: 2020_11_30_073103) do
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
-    t.integer "age"
+    t.string "username", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "username", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "location"
     t.text "description"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
