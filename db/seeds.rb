@@ -29,65 +29,65 @@ user = User.create(
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
 user.photo.attach(io: file, filename: "download.jpeg")
 
-# user_id: 2
-user = User.create(
-  username: 'pisces',
-  age: 20,
-  first_name: 'Linus',
-  last_name: 'Caldwell',
-  email: 'l_cald@gmail.com',
-  password: '123456',
-  location: 'vegas',
-  description: 'See you when I see you'
-)
+# # user_id: 2
+# user = User.create(
+#   username: 'pisces',
+#   age: 20,
+#   first_name: 'Linus',
+#   last_name: 'Caldwell',
+#   email: 'l_cald@gmail.com',
+#   password: '123456',
+#   location: 'vegas',
+#   description: 'See you when I see you'
+# )
 
-file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-user.photo.attach(io: file, filename: "download.jpg")
+# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+# user.photo.attach(io: file, filename: "download.jpg")
 
-# user_id: 3
-user = User.create(
-  username: 'gemini',
-  age: 20,
-  first_name: 'Rusty',
-  last_name: 'Ryan',
-  email: 'rr123@gmail.com',
-  password: '123456',
-  location: 'vegas',
-  description: 'Im running away with your wife'
-)
+# # user_id: 3
+# user = User.create(
+#   username: 'gemini',
+#   age: 20,
+#   first_name: 'Rusty',
+#   last_name: 'Ryan',
+#   email: 'rr123@gmail.com',
+#   password: '123456',
+#   location: 'vegas',
+#   description: 'Im running away with your wife'
+# )
 
-file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-user.photo.attach(io: file, filename: "download.jpg")
+# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+# user.photo.attach(io: file, filename: "download.jpg")
 
-# user_id: 4
-user = User.create(
-  username: 'libra',
-  age: 20,
-  first_name: 'Reuben',
-  last_name: 'Tishkoff',
-  email: 'reu_tish@gmail.com',
-  password: '123456',
-  location: 'vegas',
-  description: 'Are you out of your goddamn mind?'
-)
+# # user_id: 4
+# user = User.create(
+#   username: 'libra',
+#   age: 20,
+#   first_name: 'Reuben',
+#   last_name: 'Tishkoff',
+#   email: 'reu_tish@gmail.com',
+#   password: '123456',
+#   location: 'vegas',
+#   description: 'Are you out of your goddamn mind?'
+# )
 
-file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-user.photo.attach(io: file, filename: "download.jpg")
+# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+# user.photo.attach(io: file, filename: "download.jpg")
 
-# user_id: 5
-user = User.create(
-  username: 'virgo',
-  age: 20,
-  first_name: 'Frank',
-  last_name: 'Catton',
-  email: 'f_catton@gmail.com',
-  password: '123456',
-  location: 'vegas',
-  description: 'Nough said'
-)
+# # user_id: 5
+# user = User.create(
+#   username: 'virgo',
+#   age: 20,
+#   first_name: 'Frank',
+#   last_name: 'Catton',
+#   email: 'f_catton@gmail.com',
+#   password: '123456',
+#   location: 'vegas',
+#   description: 'Nough said'
+# )
 
-file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-user.photo.attach(io: file, filename: "download.jpg")
+# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+# user.photo.attach(io: file, filename: "download.jpg")
 
 
 # board_id: 1

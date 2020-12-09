@@ -39,24 +39,3 @@ export const fetchPin = pinId => dispatch => (
     pin => dispatch(receivePin(pin))
   )
 );
-
-// export const createPin = pin => dispatch => (
-//   PinAPIUtil.createPin(pin).then(
-//     pin => dispatch(receivePin(pin)),
-//     err => dispatch(receivePinErrors(err.responseJSON))
-//   )
-// );
-
-// export const updatePin = pin => dispatch => (
-//   PinAPIUtil.updatePin(pin).then(
-//     pin => dispatch(receivePin(pin)),
-//     err => dispatch(receivePinErrors(err.responseJSON))
-//   )
-// );
-
-// export const deletePin = pinId => dispatch => (
-//   PinAPIUtil.deletePin(pinId).then(
-//     pin => dispatch(removePin(pin.id)),
-//     err => dispatch(receivePinErrors(err.responseJSON))
-//   )
-// );

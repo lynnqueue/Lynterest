@@ -14,7 +14,7 @@ class BoardIndex extends Component {
   }
 
   render() {
-    const { boards, pins, currentUser, user, newBoard } = this.props;
+    const { boards, pins, currentUser, user } = this.props;
     const boardIndexItems = (boards.length > 0) ? (
       boards.map(board => {
         const prevPinIds = (board.pinIds) ? (
@@ -37,7 +37,7 @@ class BoardIndex extends Component {
         )
       })
     ) : (
-      null // swap with add button using newBoard
+      null
     );
 
     return (

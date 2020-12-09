@@ -1,9 +1,7 @@
 import React from "react";
-
-// import ProfileNavBar from "./profile_nav_bar";
 import ProfileDetails from "./profile_details";
 
-const ProfileHeader = ({ currentUser, user, openModal, closeModal }) => {
+const ProfileHeader = ({ user }) => {
 
   return (
     <div id="profile-header">

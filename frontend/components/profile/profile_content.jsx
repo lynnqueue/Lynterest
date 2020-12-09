@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Link, NavLink } from "react-router-dom";
-
 import ProfileSwitches from "./profile_switches";
 import BoardIndexContainer from "../board/board_index_container";
 import PinIndexContainer from "../pin/pin_index_container";
@@ -20,14 +19,14 @@ class ProfileContent extends React.Component {
   }
 
   render() {
-    const { user, boards, pins, openModal, closeModal } = this.props;
+    const { user, boards, pins } = this.props;
 
     const userBoards = boards.filter(board => board.userId === user.id);
     const userPins = pins.filter(pin => pin.userId === user.id);
 
     const contentTabs = [
-      <BoardIndexContainer user={user} boards={boards} />,
-      <PinIndexContainer pins={pins} page='profile' />
+      <BoardIndexContainer user={user} boards={userBoards} />,
+      <PinIndexContainer pins={userPins} />
     ];
     const selectedTab = contentTabs[this.state.selectedSwitch];
     const pinCount = (this.state.selectedSwitch === 1) ? (
@@ -43,7 +42,6 @@ class ProfileContent extends React.Component {
         <div id="profile-switches-wrapper">
           <ProfileSwitches
             user={user}
-            selectedSwitch={this.state.selectedSwitch}
             onSwitchClick={this.selectSwitch}
             tabs={contentTabs}
           />
