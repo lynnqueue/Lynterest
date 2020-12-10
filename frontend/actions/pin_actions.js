@@ -17,15 +17,15 @@ const receivePin = pin => ({
   pin
 });
 
-const removePin = pinId => ({
-  type: REMOVE_PIN,
-  pinId
-});
+// const removePin = pinId => ({
+//   type: REMOVE_PIN,
+//   pinId
+// });
 
-const receivePinErrors = errors => ({
-  type: RECEIVE_PIN_ERRORS,
-  errors
-});
+// const receivePinErrors = errors => ({
+//   type: RECEIVE_PIN_ERRORS,
+//   errors
+// });
 
 // thunk action creators
 export const fetchPins = () => dispatch => (
