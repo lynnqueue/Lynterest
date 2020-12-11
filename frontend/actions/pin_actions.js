@@ -17,15 +17,15 @@ const receivePin = pin => ({
   pin
 });
 
-// const removePin = pinId => ({
-//   type: REMOVE_PIN,
-//   pinId
-// });
+const removePin = pinId => ({
+  type: REMOVE_PIN,
+  pinId
+});
 
-// const receivePinErrors = errors => ({
-//   type: RECEIVE_PIN_ERRORS,
-//   errors
-// });
+const receivePinErrors = errors => ({
+  type: RECEIVE_PIN_ERRORS,
+  errors
+});
 
 // thunk action creators
 export const fetchPins = () => dispatch => (
@@ -37,5 +37,26 @@ export const fetchPins = () => dispatch => (
 export const fetchPin = pinId => dispatch => (
   PinAPIUtil.fetchPin(pinId).then(
     pin => dispatch(receivePin(pin))
+  )
+);
+
+export const createPin = pin => dispatch => (
+  PinAPIUtil.createPin(pin).then(
+    pin => dispatch(receivePin(pin)),
+    err => dispatch(receivePinErrors(err.responseJSON))
+  )
+);
+
+export const updatePin = pin => dispatch => (
+  PinAPIUtil.updatePin(pin).then(
+    pin => dispatch(receivePin(pin)),
+    err => dispatch(receivePinErrors(err.responseJSON))
+  )
+);
+
+export const deletePin = pinId => dispatch => (
+  PinAPIUtil.deletePin(pinId).then(
+    pin => dispatch(removePin(pin.id)),
+    err => dispatch(receivePinErrors(err.responseJSON))
   )
 );

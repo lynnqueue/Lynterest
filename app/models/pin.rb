@@ -1,15 +1,3 @@
-# == Schema Information
-#
-# Table name: pins
-#
-#  id          :bigint(8)        not null, primary key
-#  title       :string
-#  description :text
-#  user_id     :integer          not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  url         :string
-#
 
 class Pin < ApplicationRecord
 

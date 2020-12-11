@@ -6,7 +6,8 @@ import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps =(state, ownProps) => {
   return {
-    pins: ownProps.pins
+    pins: ownProps.pins,
+    currentUserId: state.session.id
   };
 };
 

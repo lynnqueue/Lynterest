@@ -7,21 +7,21 @@ const masonryEvents = ["load", "resize"];
 class PinIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      pinSets: [],
-      pinSetIdx: 0,
-      loadedPins: []
-    };
+  //   this.state = {
+  //     pinSets: [],
+  //     pinSetIdx: 0,
+  //     loadedPins: []
+  //   };
 
-    this.splitPins = this.splitPins.bind(this);
-  }
+  //   this.splitPins = this.splitPins.bind(this);
+  // }
 
-  splitPins(pins) {
-    const arr = [];
-    for (let i = 0; i < pins.length; i += 30) {
-      arr.push(pins.slice(i, i+30));
-    }
-    return arr;
+  // splitPins(pins) {
+  //   const arr = [];
+  //   for (let i = 0; i < pins.length; i += 30) {
+  //     arr.push(pins.slice(i, i+30));
+  //   }
+  //   return arr;
   }
 
   render() {
