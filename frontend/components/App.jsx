@@ -24,7 +24,8 @@ const App = () => (
     <Switch>
       <ProtectedRoute exact path="/:username" component={ProfileShowContainer} />
       <ProtectedRoute exact path="/:username/pins" component={ProfileShowContainer} />
-      <ProtectedRoute exact path="/:username/boards" component={ProfileShowContainer} />
+      <ProtectedRoute exact path="/:username/boards" component={ProfileShowContainer} />      
+      <ProtectedRoute exact path="/pin-builder" component={CreatePinFormContainer} />
       <ProtectedRoute exact path="/pin/:pinId" component={PinShowContainer} />
       <ProtectedRoute exact path="/:username/:boardTitle" component={BoardShowContainer} />
       <Route exact path="/" component={HomeContainer} />

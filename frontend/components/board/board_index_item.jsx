@@ -1,5 +1,9 @@
 import React from "react";
+
 import { Link, withRouter } from "react-router-dom";
+// import LinesEllipsis from "react-lines-ellipsis";
+
+
 
 const BoardIndexItem = ({ board, pins, currentUser, user, openEditBoard }) => {
   const numPins = board.pinIds.length;
@@ -10,6 +14,11 @@ const BoardIndexItem = ({ board, pins, currentUser, user, openEditBoard }) => {
   const pinE = (pins[4]) ? <img src={`${pins[4].photo}`}></img> : null;
   const pinF = (pins[5]) ? <img src={`${pins[5].photo}`}></img> : null;
   
+  const secretIcon = (board.secret) ? (
+    <div className="board-index-item visibility">
+      <i className="fas fa-lock board-index-item" id="lock-icon"></i>
+    </div>
+  ) : null;
   const klass = (currentUser.username === user.username) ? 'show' : 'hide';
 
   return (
@@ -42,6 +51,7 @@ const BoardIndexItem = ({ board, pins, currentUser, user, openEditBoard }) => {
                   {board.title}
                 </div>
                 <div className="board-index-item additional">
+                  {secretIcon}
                   <div className="board-index-item pin-count">
                     {numPins} Pins
                   </div>
@@ -49,7 +59,7 @@ const BoardIndexItem = ({ board, pins, currentUser, user, openEditBoard }) => {
               </div>
               <button
                 className={`board-index-item edit-button ${klass}`}
-                onClick={(e, BoardId) => openEditBoard(e, board.id)}
+                onClick={(e, boardId) => openEditBoard(e, board.id)}
               >
                 <i className="fas fa-pencil-alt board-index-item" id="edit-icon"></i>
               </button>

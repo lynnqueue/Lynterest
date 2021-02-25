@@ -30,8 +30,8 @@ export default class BoardShow extends Component {
         null
     );
     let boardPins = boardsPins
-      .filter(boardPin => board.id === boardPin.board_id)
-      .map(boardPin => pins[boardPin.pin_id])
+      .filter(boardPin => board.id === boardPin.boardId)
+      .map(boardPin => pins[boardPin.pinId])
       .filter(boardPin => boardPin !== undefined);
 
     return (
@@ -55,7 +55,7 @@ export default class BoardShow extends Component {
                   {`${board.pinIds.length} pins`}
                 </div>
                 <div className="board-show count follower">
-                  ·  9 followers
+                  ·  7 followers
                 </div>
               </div>
             </div>
@@ -78,8 +78,8 @@ export default class BoardShow extends Component {
 BoardShow.defaultProps = {
   board: {
     id: 0,
-    title: 'Zzzzz',
-    description: 'who needs sleeping',
+    title: 'boardman',
+    description: 'boardman gets paid',
     secret: false,
     pinIds: []
   }

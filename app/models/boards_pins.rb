@@ -12,8 +12,6 @@
 class BoardsPins < ApplicationRecord
 
   validates :board_id, :pin_id, presence: true
-  # validates :board_id, uniqueness: { scope: :pin_id,
-  #   message: "Psst! You already saved this Pin to this Board" }
     
   belongs_to :pin
   belongs_to :board

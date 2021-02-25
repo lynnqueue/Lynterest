@@ -25,6 +25,7 @@ class BoardShowNavBar extends React.Component {
     const { prevScrollPos } = this.state;
     const currentScrollPos = window.pageYOffset;
     const fadeInTitle = (prevScrollPos < currentScrollPos - 50);
+    // calculates how far down the screen you are before enacting title transition
     
     this.setState({
       fadeInTitle
@@ -38,6 +39,19 @@ class BoardShowNavBar extends React.Component {
 
     return (
       <div className="board-show navbar">
+        <div className={`board-show buttons ${klass}`}>
+          <Link to="/pin-builder"
+            className="board-show button">
+            {/* <i className="fas fa-plus board-show icon" id="create-pin-icon"></i> */}
+            <i className="fas fa-map-pin board-show icon"></i>
+          </Link>
+          <button
+            className="board-show button"
+            onClick={(e, boardId) => openEditBoard(e, board.id)}
+          >
+            <i className="fas fa-pencil-alt board-show icon" id="edit-board-icon"></i>
+          </button>
+        </div>
         <div className="board-show fade-title-container">
           <div className={`board-show fade-title ${transition}`}>
             {board.title}
@@ -56,3 +70,11 @@ class BoardShowNavBar extends React.Component {
 }
 
 export default BoardShowNavBar;
+
+BoardShowNavBar.defaultProps = {
+  board: {
+    title: 'boardman',
+    description: 'boardman gets paid',
+    secret: false
+  }
+}
