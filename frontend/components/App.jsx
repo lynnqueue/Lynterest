@@ -14,6 +14,8 @@ import PinShowContainer from "./pin/pin_show_container";
 import ProfileShowContainer from "./profile/profile_show_container";
 import BoardShowContainer from "./board/board_show_container";
 import HomeContainer from "./home/home_container";
+import CreatePinFormContainer from "./pin/form/create_pin_form_container";
+
 
 const App = () => (
   <div className="app">

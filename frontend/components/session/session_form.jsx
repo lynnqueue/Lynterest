@@ -33,24 +33,14 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    this.props.demoLogin({email: "d_ocean@gmail.com", password: "123456"})
-      .then(this.props.closeModal)
-      .then(() => location.reload(true));
-    // let email = "d_ocean@gmail.com";
-    // let password = "123456";
 
-    // this._disableInputs();
-    
-    // this.setState({email: "", password: ""}, () =>
-    //   this._autoInput("email", email, () =>
-    //     this._autoInput("password", password, () => {
-    //       const demoUser = Object.assign({}, this.state);
-    //       this.props.demoLogin(demoUser)
-    //         .then(this.props.closeModal)
-    //         .then(() => location.reload(true))
-    //     })
-    //   )
-    // )
+    this.setState({
+      email: 'd_ocean@gmail.com',
+      password: '123456'
+    }, () => {
+            const user = Object.assign({}, this.state);
+            this.props.processForm(user).then(() => this.props.closeModal());
+        })
   }
 
   _disableInputs() {
