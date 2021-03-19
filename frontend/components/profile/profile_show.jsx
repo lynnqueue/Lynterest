@@ -9,8 +9,19 @@ class ProfileShow extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    const username = this.props.match.params.username;
+    const fetchUser = (userId) => this.props.fetchSingleUser(userId);
+
+    this.props.fetchAllUsers()
+      .then(res => {
+        const user = Object.values(res.users).find(user => user.username === username);
+        return fetchUser(user.id);
+      });
+  }
+
   render() {
-    const { users, username, boards, pins } = this.props;
+    const { currentUser, users, username, boards, pins, openModal, closeModal } = this.props;
     const user = users.find(user => user.username === username);
 
     return (
@@ -19,7 +30,10 @@ class ProfileShow extends React.Component {
           <div id="profile">
             <div id="profile-header-container">
               <ProfileHeader
+                currentUser={currentUser}
                 user={user}
+                openModal={openModal}
+                closeModal={closeModal}
               />
             </div>
             <div id="profile-content-container">
@@ -27,6 +41,8 @@ class ProfileShow extends React.Component {
                 user={user}
                 boards={boards}
                 pins={pins}
+                openModal={openModal}
+                closeModal={closeModal}
               />
             </div>
           </div>

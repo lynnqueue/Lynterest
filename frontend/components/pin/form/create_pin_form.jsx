@@ -111,7 +111,6 @@ class CreatePinForm extends React.Component {
         ) : (
             <div className="board-li pin-photo"></div>
           );
-        const secret = (board.secret) ? 'show ish' : 'hide';
         return (
           <li
             key={board.id}
@@ -125,9 +124,6 @@ class CreatePinForm extends React.Component {
                 <div></div>
               </div>
               <div className="board-li title">{board.title}</div>
-              <div className={`board-li secret-icon-container ${secret}`}>
-                <i className="fas fa-lock board-li secret-icon"></i>
-              </div>
             </div>
           </li>
         )}

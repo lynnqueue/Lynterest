@@ -6,23 +6,12 @@ class CreateBoardForm extends React.Component {
     this.state = this.props.board;
 
     this.update = this.update.bind(this);
-    this.handleCheck = this.handleCheck.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
   }
 
   update(e) {
     this.setState({ "title": e.currentTarget.value });
-  }
-
-  handleCheck() {
-    this.setState({ "secret": !this.state.secret });
-    const checkbox = document.getElementById('visibility-checkbox');
-    if (this.state.secret) {
-      checkbox.firstChild.classList.add('checked');
-    } else {
-      checkbox.firstChild.classList.remove('checked');
-    };
   }
 
   handleClose(e) {
@@ -38,7 +27,6 @@ class CreateBoardForm extends React.Component {
 
   render() {
     const { errors, formType } = this.props;
-    const checked = (this.state.secret) ? 'checked' : null;
 
     return (
       <div id="create-board-container">
@@ -92,36 +80,6 @@ class CreateBoardForm extends React.Component {
                             </div>
                           </div>
                         </span>
-                      </div>
-                    </div>
-                    <div className="create-board field-container" id="visibility">
-                      <div className="create-board label-container">
-                        <label
-                          htmlFor="visibility-input"
-                          className="create-board label"
-                          id="visibility-label">
-                          <div
-                            className="create-board label-content"
-                            onClick={this.handleCheck}
-                          >
-                            Visibility
-                          </div>
-                        </label>
-                      </div>
-                      <div className="create-board input-container secret">
-                        <div
-                          className="create-board"
-                          id="visibility-checkbox"
-                          onClick={this.handleCheck}
-                        >
-                          <i
-                            className={`fas fa-check-square create-board checkbox ${checked}`}
-                            id="visibility-checked"
-                          ></i>
-                        </div>
-                        <div className="create-board" id="visibility-note">
-                          Keep this board secret.
-                        </div>
                       </div>
                     </div>
                   </div>

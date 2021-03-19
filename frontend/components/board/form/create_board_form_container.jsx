@@ -6,7 +6,7 @@ import { openModal, closeModal } from "../../../actions/modal_actions";
 import CreateBoardForm from "./create_board_form";
 
 const mapStateToProps = state => ({
-  board: {"title": "", "description": "", "secret": false},
+  board: {"title": "", "description": ""},
   errors: state.errors.board,
   formType: "Create board",
 });

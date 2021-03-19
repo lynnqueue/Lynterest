@@ -19,6 +19,7 @@ class PinIndexItem extends React.Component {
     let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
     let itemImg = item.querySelector(".masonry-image");
     let rowSpan = Math.ceil((itemImg.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+    // if (this.state.title !== '') rowSpan += 2;
     item.style.gridRowEnd = "span " + rowSpan;
   }
 
@@ -28,14 +29,23 @@ class PinIndexItem extends React.Component {
   }
 
   render() {
-    const { userId, pin, openNewBoardPin } = this.props;
+    const { userId, user, page, pin, openEditPin, openNewBoardPin } = this.props;
 
-    const pinTitle = (userId !== null && pin.title !== "") ? (
+    const pinTitle = (userId !== null && page === "home" && pin.title !== "") ? (
       <div className="pin-index-item title-container">
         <div className="pin-index-item title">{pin.title}</div>
       </div>
-    ) : null;    
+    ) : null;
 
+    const editPinLink = (page === 'profile' && location.hash.includes(user.username)) ? (
+      <a
+        className="pin-index-item edit-pin-link"
+        onClick={() => openEditPin(pin.id)}
+      >
+        <i className="fas fa-pencil-alt edit-pin-icon"></i>
+      </a>
+    ) : null;
+    
     const openBoardPinLink = (
       <a
         className="pin-index-item save-board-pin-link"
@@ -44,6 +54,17 @@ class PinIndexItem extends React.Component {
         <div className="pin-index-item save-board-pin-text">Save</div>
       </a>
     );
+
+    const pinUrl = pin.url;
+    const shortPinUrl = pinUrl.slice(12, 22) + "...";
+    const pinLink = (pinUrl !== '') ? (
+      <a href={`${pinUrl}`} target="_blank" className="pin-index-item pin-link">
+        <i className="fas fa-external-link-alt pin-link-icon"></i>
+        <div className="pin-index-item pin-link-text">
+          {shortPinUrl}
+        </div>
+      </a>
+    ) : null;
     
     return (
       <div id={`${this.state.id}`} className="pin-index-item container">
@@ -56,7 +77,9 @@ class PinIndexItem extends React.Component {
             <img src={pin.photo} className="pin-index-item masonry-image"/>
           </Link>
           <div className="pin-index-item links">
+            <div className="pin-index-item edit-pin-link-container">{editPinLink}</div>
             <div className="save-board-pin-link-container">{openBoardPinLink}</div>
+            <div className="pin-index-item pin-link-container">{pinLink}</div>
           </div>
         </div>
         {pinTitle}

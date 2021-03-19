@@ -6,8 +6,7 @@ class EditBoardForm extends React.Component {
     this.state = {
       id: this.props.board.id,
       title: this.props.board.title,
-      description: this.props.board.description,
-      secret: this.props.board.secret
+      description: this.props.board.description
     };
 
     this.update = this.update.bind(this);
@@ -21,19 +20,6 @@ class EditBoardForm extends React.Component {
     return (e =>
       this.setState({ [field]: e.currentTarget.value })
     )
-  }
-
-  handleCheck(e) {
-    e.preventDefault();
-
-    this.setState({ "secret": !this.state.secret }, () => {
-      const checkbox = document.getElementById('visibility-checkbox');
-      if (this.state.secret) {
-        checkbox.firstChild.classList.add('checked');
-      } else {
-        checkbox.firstChild.classList.remove('checked');
-      }
-    });
   }
 
   openDeleteBoard(e, boardId) {
@@ -56,7 +42,6 @@ class EditBoardForm extends React.Component {
 
   render() {
     const { board, errors, formTitle } = this.props;
-    const checked = (this.state.secret) ? 'checked' : null;
 
     return (
       <div className="edit-board container">
@@ -125,33 +110,6 @@ class EditBoardForm extends React.Component {
                     </div>
                   </div>
                 </span>
-              </div>
-            </div>
-            <div className="edit-board field visibility">
-              <div className="edit-board label-container">
-                <label
-                  htmlFor="visibility-input"
-                  className="edit-board label"
-                  id="visibility-label"
-                  onClick={this.handleCheck}
-                >
-                  Visibility
-                </label>
-              </div>
-              <div className="edit-board input-container secret">
-                <button
-                  className="edit-board"
-                  id="visibility-checkbox"
-                  onClick={this.handleCheck}
-                >
-                  <i
-                    className={`fas fa-check-square edit-board checkbox ${checked}`}
-                    id="visibility-checked"
-                  ></i>
-                </button>
-                <div className="edit-board visibility-note">
-                  Keep this board secret.
-                </div>
               </div>
             </div>
           </div>

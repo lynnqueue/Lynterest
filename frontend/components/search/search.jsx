@@ -17,11 +17,6 @@ class Search extends React.Component {
         </div>
         <div className="search-input-container">
           <input className="search-input" type="text" placeholder="Search" />
-          {/* <div className="search-modal">
-            When autocomplete results are available use up and down arrows
-            to review and enter to select. Touch device users, explore by touch
-            or with swipe gestures.
-          </div> */}
         </div>
       </div>
     )

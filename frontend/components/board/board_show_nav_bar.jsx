@@ -74,7 +74,6 @@ export default BoardShowNavBar;
 BoardShowNavBar.defaultProps = {
   board: {
     title: 'boardman',
-    description: 'boardman gets paid',
-    secret: false
+    description: 'boardman gets paid'
   }
 }

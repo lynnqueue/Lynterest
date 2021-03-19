@@ -3,7 +3,7 @@ import React from "react";
 import PinShow from "./pin_show";
 
 import { fetchPin } from "../../actions/pin_actions";
-import { closeModal, openModal } from "../../actions/modal_actions";
+import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => ({
   pin: state.entities.pins[ownProps.match.params.pinId],
@@ -13,8 +13,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchPin: pinId => dispatch(fetchPin(pinId)),
+  openEditPin: pinId => dispatch(openModal("edit-pin", pinId)),
   openNewBoardPin: pinId => dispatch(openModal("new-board-pin", pinId)),
-  closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PinShow);

@@ -1,7 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Route, Link, NavLink } from "react-router-dom";
 
-const ProfileSwitches = ({ user, onSwitchClick, tabs }) => {
+const ProfileSwitches = ({ user, selectedSwitch, onSwitchClick, tabs }) => {
   const switches = tabs.map((tab, idx) => {
     const label = (idx === 0) ? "Boards" : "Pins";
 

@@ -23,7 +23,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   fetchBoards: () => dispatch(fetchBoards()),
   createBoardPin: boardPin => dispatch(createBoardPin(boardPin)),
-  openNewBoard: () => dispatch(openModal('new-board')),
+  // openNewBoard: () => dispatch(openModal('new-board')),
   closeModal: () => dispatch(closeModal())
 });
 
