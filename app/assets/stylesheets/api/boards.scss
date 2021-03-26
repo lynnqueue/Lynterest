@@ -50,7 +50,7 @@
 .create-board#header-title {
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -83,7 +83,7 @@
   display: flex;
   background-color: transparent;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.06)
+    background-color: rgba(0, 0, 0, 0.06);
   }
   &:focus {
     box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.5);
@@ -119,7 +119,6 @@
 }
 
 .create-board#form {
-
 }
 
 .create-board#fields {
@@ -144,7 +143,6 @@
   }
 }
 
-
 .create-board.label-container {
   box-sizing: border-box;
   padding: 12px 4px;
@@ -164,7 +162,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -177,20 +175,13 @@
   @media (min-width: 768px) {
     width: 75%;
   }
-  &.secret {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 8px 0;
-  }
 }
 
 .create-board.name-input {
   box-sizing: border-box;
   min-height: 40px;
   width: 100%;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -209,7 +200,6 @@
 .create-board.error-container {
   box-sizing: border-box;
   margin-top: 4px;
-
 }
 
 .create-board.error {
@@ -219,14 +209,15 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: #e60023;
 }
 
-.create-board.error-content {}
+.create-board.error-content {
+}
 
 .create-board#visibility-checkbox {
   position: relative;
@@ -249,7 +240,7 @@
   left: -2px;
   height: 28px;
   width: 28px;
-  color: black;  
+  color: black;
 }
 
 .create-board.checkbox {
@@ -266,7 +257,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -316,7 +307,7 @@
   padding: 10px 14px;
   text-align: center;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -325,8 +316,6 @@
     background-color: #e2e2e2;
   }
 }
-
-
 
 ////////////////////////////////////////////////////////////////////
 /////////////////////////// BOARD INDEX ////////////////////////////
@@ -365,17 +354,17 @@
   top: -8px;
   position: absolute;
   z-index: 1;
-  background: rgba(0,0,0,.064);
+  background: rgba(0, 0, 0, 0.064);
   pointer-events: none;
   width: 105%;
   height: 105%;
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .board-index-item.link {
   color: #333;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .board-index-item.content {
@@ -414,31 +403,31 @@
     left: 0px;
     height: 99px;
   }
-  
+
   &#b {
     top: 0px;
     left: 100.667px;
     height: 48.5px;
   }
-  
+
   &#c {
     top: 0px;
     left: 201.333px;
     height: 99px;
   }
-  
+
   &#d {
     top: 50.5px;
     left: 100.667px;
     height: 149.5px;
   }
-  
+
   &#e {
     top: 101px;
     left: 0px;
     height: 99px;
   }
-  
+
   &#f {
     top: 101px;
     left: 201.333px;
@@ -478,7 +467,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 21px;
@@ -517,7 +506,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -549,8 +538,6 @@
   vertical-align: middle;
 }
 
-
-
 ////////////////////////////////////////////////////////////////////
 //////////////////////////// BOARD SHOW ////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -577,7 +564,7 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   z-index: 103;
-  background-color: hsla(0,0%,100%,.95);
+  background-color: hsla(0, 0%, 100%, 0.95);
   height: 64px;
   width: 100%;
   display: flex;
@@ -630,7 +617,6 @@
   width: 24px;
 }
 
-
 .board-show.fade-title-container {
   box-sizing: border-box;
   min-width: 0px;
@@ -651,7 +637,7 @@
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -663,15 +649,15 @@
     pointer-events: none;
     -webkit-transform: translate(0);
     transform: translate(0);
-    -webkit-transition: .3s ease-out;
-    transition: .3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
   }
   &.in {
     opacity: 1;
     -webkit-transform: translateY(66px);
     transform: translateY(66px);
-    -webkit-transition: .3s ease-out;
-    transition: .3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
   }
 }
 
@@ -717,7 +703,7 @@
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -758,7 +744,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -781,7 +767,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -804,7 +790,6 @@
 //   margin: 12px;
 // }
 
-
 ////////////////////////////////////////////////////////////////////
 //////////////////////////// EDIT BOARD ////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -816,7 +801,8 @@
   margin: 0 auto;
 }
 
-.edit-board.form {}
+.edit-board.form {
+}
 
 .edit-board.header {
   box-sizing: border-box;
@@ -854,7 +840,7 @@
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -920,7 +906,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -933,18 +919,12 @@
   @media (min-width: 768px) {
     width: 75%;
   }
-  &.secret {
-    padding: 8px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
 }
 
 .edit-board.input {
   box-sizing: border-box;
   width: 100%;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1008,31 +988,34 @@
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
   font-weight: 400;
   font-size: 12px;
   @media (min-width: 576px) {
-      font-size: 12px;
+    font-size: 12px;
   }
   @media (min-width: 768px) {
-      font-size: 12px;
+    font-size: 12px;
   }
   @media (min-width: 1312px) {
     font-size: 14px;
   }
 }
 
-.edit-board.error-container {}
+.edit-board.error-container {
+}
 
-.edit-board.error {}
+.edit-board.error {
+}
 
-.edit-board.error-content {}
+.edit-board.error-content {
+}
 
-.edit-board.error-content {}
-
+.edit-board.error-content {
+}
 
 .edit-board.footer {
   box-sizing: border-box;
@@ -1064,7 +1047,7 @@
   padding: 10px 14px;
   text-align: center;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -1085,14 +1068,12 @@
   }
 }
 
-
-
 ////////////////////////////////////////////////////////////////////
 /////////////////////////// DELETE BOARD ///////////////////////////
 ////////////////////////////////////////////////////////////////////
 .delete-board.container {
   border-radius: 6px;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.22);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   margin: auto;
   max-height: 200%;
   position: relative;
@@ -1119,7 +1100,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 21px;
@@ -1140,14 +1121,15 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: #333;
 }
 
-.delete-board.footer {}
+.delete-board.footer {
+}
 
 .delete-board.buttons {
   display: flex;
@@ -1167,7 +1149,7 @@
   display: inline-block;
   text-align: center;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;

@@ -15,7 +15,7 @@ BoardsPins.destroy_all
 
 
 # user_id: 1
-user = User.create(
+user1 = User.create(
   username: 'aries',
   first_name: 'Danny',
   last_name: 'Ocean',
@@ -26,57 +26,53 @@ user = User.create(
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-user.photo.attach(io: file, filename: "download.jpeg")
+user1.photo.attach(io: file, filename: "download.jpeg")
 
-# # user_id: 2
-# user = User.create(
-#   username: 'pisces',
-#   age: 20,
-#   first_name: 'Linus',
-#   last_name: 'Caldwell',
-#   email: 'l_cald@gmail.com',
-#   password: '123456',
-#   location: 'vegas',
-#   description: 'See you when I see you'
-# )
+# user_id: 2
+user2 = User.create(
+  username: 'pisces',
+  first_name: 'Linus',
+  last_name: 'Caldwell',
+  email: 'l_cald@gmail.com',
+  password: '123456',
+  location: 'vegas',
+  description: 'See you when I see you'
+)
 
-# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-# user.photo.attach(io: file, filename: "download.jpg")
+file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+user2.photo.attach(io: file, filename: "download.jpg")
 
-# # user_id: 3
-# user = User.create(
-#   username: 'gemini',
-#   age: 20,
-#   first_name: 'Rusty',
-#   last_name: 'Ryan',
-#   email: 'rr123@gmail.com',
-#   password: '123456',
-#   location: 'vegas',
-#   description: 'Im running away with your wife'
-# )
+# user_id: 3
+user3 = User.create(
+  username: 'gemini',
+  first_name: 'Rusty',
+  last_name: 'Ryan',
+  email: 'rr123@gmail.com',
+  password: '123456',
+  location: 'vegas',
+  description: 'Im running away with your wife'
+)
 
-# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-# user.photo.attach(io: file, filename: "download.jpg")
+file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+user3.photo.attach(io: file, filename: "download.jpg")
 
-# # user_id: 4
-# user = User.create(
-#   username: 'libra',
-#   age: 20,
-#   first_name: 'Reuben',
-#   last_name: 'Tishkoff',
-#   email: 'reu_tish@gmail.com',
-#   password: '123456',
-#   location: 'vegas',
-#   description: 'Are you out of your goddamn mind?'
-# )
+# user_id: 4
+user4 = User.create(
+  username: 'libra',
+  first_name: 'Reuben',
+  last_name: 'Tishkoff',
+  email: 'reu_tish@gmail.com',
+  password: '123456',
+  location: 'vegas',
+  description: 'Are you out of your goddamn mind?'
+)
 
-# file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
-# user.photo.attach(io: file, filename: "download.jpg")
+file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/download.jpeg")
+user4.photo.attach(io: file, filename: "download.jpg")
 
-# # user_id: 5
+# user_id: 5
 # user = User.create(
 #   username: 'virgo',
-#   age: 20,
 #   first_name: 'Frank',
 #   last_name: 'Catton',
 #   email: 'f_catton@gmail.com',
@@ -93,69 +89,29 @@ user.photo.attach(io: file, filename: "download.jpeg")
 Board.create(
   title: "Animals",
   description: "Animal photos",
-  user_id: 1
+  user_id: user1.id
 )
 
 # board_id: 2
 Board.create(
-  title: "nature",
+  title: "Nature",
   description: "Nature photos",
-  user_id: 1
+  user_id: user2.id
 )
 
 # board_id: 3
 Board.create(
-  title: "interiors",
+  title: "Interiors",
   description: "Interiors photos",
-  user_id: 1
+  user_id: user3.id
 )
 
 # board_id: 4
 Board.create(
-  title: "travel",
+  title: "Travel",
   description: "travel photos",
-  user_id: 1
+  user_id: user4.id
 )
-
-# board_id: 5
-# Board.create(
-#   title: "Abstract Artwork",
-#   description: "Amazing collection to add at home",
-#   secret: true,
-#   user_id: 1
-# )
-
-# # board_id: 6
-# Board.create(
-#   title: "Aesthetic Animals",
-#   description: "Lovely creatures to be admired",
-#   secret: false,
-#   user_id: 1
-# )
-
-# # board_id: 7
-# Board.create(
-#   title: "Nature's Beauty",
-#   description: "Truly remarkable work",
-#   secret: false,
-#   user_id: 1
-# )
-
-# # board_id: 8
-# Board.create(
-#   title: "Lavish Lands",
-#   description: "Every place has a story",
-#   secret: false,
-#   user_id: 2
-# )
-
-# # board_id: 9
-# Board.create(
-#   title: "People Paintings",
-#   description: "Everyone has a story",
-#   secret: false,
-#   user_id: 4
-# )
 
 
 # ANIMAL
@@ -163,7 +119,7 @@ pin = Pin.create(
   title: "",
   description: "animal 1",
   url: "",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/nTnXC9nzTgGCXImAeU2B_submission2.jpg")
@@ -178,7 +134,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 2",
   url: "",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1484406566174-9da000fda645.jpeg")
@@ -193,7 +149,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 3",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1504208434309-cb69f4fe52b0.jpeg")
@@ -208,7 +164,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 4",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1531958532341-b88dc3d33abe.jpeg")
@@ -223,7 +179,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 5",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1547468852-a009a1248cae.jpeg")
@@ -238,7 +194,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 6",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1548625129-175bb42da502.jpeg")
@@ -253,7 +209,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 7",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1561652920-8f376b082576.jpeg")
@@ -268,7 +224,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 8",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1572368962019-b174d8455588.jpeg")
@@ -283,7 +239,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 9",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1573725342230-178c824a10f2.jpeg")
@@ -298,7 +254,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 10",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1582645987199-c85d8cfbacb0.jpeg")
@@ -313,7 +269,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 11",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1585908286456-991b5d0e53f4.jpeg")
@@ -328,7 +284,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 12",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1587675213549-82cd6379ee42.jpeg")
@@ -343,7 +299,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 13",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1589217598472-0a8bc7744b11.jpeg")
@@ -358,7 +314,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 14",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1594044501419-e3c3b4d4cd47.jpeg")
@@ -373,7 +329,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 15",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1600340432632-6ae5c7bb2347.jpeg")
@@ -388,7 +344,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 16",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1600551584344-901f36fb4c9f.jpeg")
@@ -403,7 +359,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 17",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1601015686531-5f8a08e15755.jpeg")
@@ -418,7 +374,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 18",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1601214571665-8871c68fcd46.jpeg")
@@ -433,7 +389,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 19",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1601293058843-f34e8dd9ccfd.jpeg")
@@ -448,7 +404,7 @@ pin = Pin.create(
   title: "",
   description: "Animal 20",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user1.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/animals/photo-1601994000213-ae29f61232bd.jpeg")
@@ -466,7 +422,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 1",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1477322524744-0eece9e79640.jpeg")
@@ -481,7 +437,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 2",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1547619378-933802c1fd76.jpeg")
@@ -496,7 +452,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 3",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1571129163939-5ddafd71fa91.jpeg")
@@ -511,7 +467,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 4",
   url: "unsplash.com",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1587732305677-5bc3c4bda871.jpeg")
@@ -526,7 +482,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 5",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1596709097416-6d4206796022.jpeg")
@@ -541,7 +497,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 6",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1603879607624-06fcd4ab2894.jpeg")
@@ -556,7 +512,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 7",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1605441065768-a2798213ac26.jpeg")
@@ -571,7 +527,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 8",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1605463937280-695c6d381609.jpeg")
@@ -586,7 +542,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 9",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1605539558089-0c14c173b015.jpeg")
@@ -601,7 +557,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 10",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1605609476793-3015923b4be1.jpeg")
@@ -616,7 +572,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 11",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1605719720214-ba96e80dc9c2.jpeg")
@@ -631,7 +587,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 12",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1605977216813-2db4874819b4.jpeg")
@@ -646,7 +602,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 13",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1606005162013-8e97e17ec10a.jpeg")
@@ -661,7 +617,7 @@ pin = Pin.create(
   title: "",
   description: "Nature 14",
   url: "",
-  user_id: 1
+  user_id: user2.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/nature/photo-1606029246036-7b352c188652.jpeg")
@@ -678,7 +634,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 01",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1524693220625-1ce88de88992.jpeg")
@@ -693,7 +649,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 02",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1552900096-5d526c911707.jpeg")
@@ -708,7 +664,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 03",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1554971517-f21bd29c09af.jpeg")
@@ -723,7 +679,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 04",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1555116505-38ab61800975.jpeg")
@@ -738,7 +694,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 05",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1577892209774-00115cf0428d.jpeg")
@@ -753,7 +709,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 06",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1579197647896-90e794118293.jpeg")
@@ -768,7 +724,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 07",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1581970696773-e8db5c771e68.jpeg")
@@ -783,7 +739,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 08",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1582663120922-9c233bfb74e2.jpeg")
@@ -798,7 +754,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 09",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1582749911683-de45b174f669.jpeg")
@@ -813,7 +769,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 10",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1584973547886-92c625508e24.jpeg")
@@ -828,7 +784,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 11",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1589793907316-f94025b46850.jpeg")
@@ -843,7 +799,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 12",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1590653264295-33093c07bd05.jpeg")
@@ -858,7 +814,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 13",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1596194789619-e0ff3e3f310a.jpeg")
@@ -873,7 +829,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 14",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1601743383597-c24974f7112b.jpeg")
@@ -888,7 +844,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 15",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1602005913008-fdae98a9eaf9.jpeg")
@@ -903,7 +859,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 16",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1602484069629-7033c3c6194c.jpeg")
@@ -918,7 +874,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 17",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1602701056390-09456b050ac9.jpeg")
@@ -933,7 +889,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 18",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1602834030251-c7b364a2ee34.jpeg")
@@ -948,7 +904,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 19",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1602872030219-ad2b9a54315c.jpeg")
@@ -963,7 +919,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 20",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1602872367034-564924d238b7.jpeg")
@@ -978,7 +934,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 21",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1603204077345-7afb41a47e18.jpeg")
@@ -993,7 +949,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 22",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1603224539456-606f29bd2a0a.jpeg")
@@ -1008,7 +964,7 @@ pin = Pin.create(
   title: "",
   description: "Interiors 23",
   url: "",
-  user_id: 1
+  user_id: user3.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/interiors/photo-1604306354505-8bab3239b009.jpeg")
@@ -1024,7 +980,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 01",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1442033409393-2870a03634e1.jpeg")
@@ -1039,7 +995,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 02",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1516686560589-9ab846de9bb6.jpeg")
@@ -1054,7 +1010,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 03",
   url: "unsplash.com",
-  user_id: 2
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1516715297744-34f95f1ec63f.jpeg")
@@ -1069,7 +1025,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 04",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1517157322632-15df54e726d3.jpeg")
@@ -1084,7 +1040,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 05",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1517164481925-73c4f907f47a.jpeg")
@@ -1099,7 +1055,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 06",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1531204823259-03b92a613013.jpeg")
@@ -1114,7 +1070,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 07",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1534856966153-c86d43d53fe0.jpeg")
@@ -1129,7 +1085,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 08",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1543512686-9f9a0a62d5f2.jpeg")
@@ -1144,7 +1100,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 09",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1575492534537-792e4e1b8bed.jpeg")
@@ -1159,7 +1115,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 10",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1575735409309-e0ecb6088fcd.jpeg")
@@ -1174,7 +1130,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 11",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1578133950461-ff75984e6392.jpeg")
@@ -1189,7 +1145,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 12",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1583317094917-8aac805fed5a.jpeg")
@@ -1204,7 +1160,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 13",
   url: "unsplash.com",
-  user_id: 2
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1586609073158-3e47c1e24b28.jpeg")
@@ -1219,7 +1175,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 14",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1601917717704-28a5801b9901.jpeg")
@@ -1234,7 +1190,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 15",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1603104143215-0e1f60e7c056.jpeg")
@@ -1249,7 +1205,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 16",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1603104144902-8a46f21ca4c5.jpeg")
@@ -1264,7 +1220,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 17",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1603793516210-5cf879f819af.jpeg")
@@ -1279,7 +1235,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 18",
   url: "unsplash.com",
-  user_id: 2
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1603888614264-1130819e9a64.jpeg")
@@ -1294,7 +1250,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 19",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604042834213-db512237efdf.jpeg")
@@ -1309,7 +1265,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 20",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604164389024-1df8238674d5.jpeg")
@@ -1324,7 +1280,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 21",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604186433294-f4f2721825ef.jpeg")
@@ -1339,7 +1295,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 22",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604304694557-d669026ce88f.jpeg")
@@ -1354,7 +1310,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 23",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604608672516-f1b9b1d37076.jpeg")
@@ -1369,7 +1325,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 24",
   url: "unsplash.com",
-  user_id: 2
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604608681018-e5c9db554fd5.jpeg")
@@ -1384,7 +1340,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 25",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604947498105-0ed418039700.jpeg")
@@ -1399,7 +1355,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 26",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1604999286549-9775ca576cd3.jpeg")
@@ -1414,7 +1370,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 27",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605025205217-e4e835e57ac5.jpeg")
@@ -1429,7 +1385,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 28",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605051268785-c9199f2d2103.jpeg")
@@ -1444,7 +1400,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 29",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605085805739-e7d98e270db3.jpeg")
@@ -1459,7 +1415,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 30",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605100970536-2046737bc76d.jpeg")
@@ -1474,7 +1430,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 31",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605217982221-3b46a8904f05.jpeg")
@@ -1489,7 +1445,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 32",
   url: "unsplash.com",
-  user_id: 2
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605449775567-9c0e398d260b.jpeg")
@@ -1504,7 +1460,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 33",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605821750756-946988f72f22.jpeg")
@@ -1519,7 +1475,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 34",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605880560356-d21791f96693.jpeg")
@@ -1534,7 +1490,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 35",
   url: "unsplash.com",
-  user_id: 2
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1605888720025-8d079371e8df.jpeg")
@@ -1549,7 +1505,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 36",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1606071152856-fb5b9cd33097.jpeg")
@@ -1564,7 +1520,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 37",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1606111287187-62c2a58f4c02.jpeg")
@@ -1579,7 +1535,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 38",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1606140967260-f19bcc9259f8.jpeg")
@@ -1594,7 +1550,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 39",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1606170927122-9d111e6d949e.jpeg")
@@ -1609,7 +1565,7 @@ pin = Pin.create(
   title: "",
   description: "Travel 40",
   url: "",
-  user_id: 1
+  user_id: user4.id
 )
 
 file = open("https://lynterest-seeds.s3.us-east-2.amazonaws.com/lynterest_seeds/travel/photo-1606291587598-4e4f5a3d6783.jpeg")

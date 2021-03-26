@@ -8,14 +8,8 @@ import { fetchPins } from '../../actions/pin_actions';
 
 const mapStateToProps = state => {
   const currentUserId = state.session.id;
-  // const allPins = Object.values(state.entities.pins);
-  // const pins = (currentUserId) ? (
-  //   allPins.filter(pin => pin.userId !== currentUserId)
-  // ) : (
-  //   allPins.slice(0, 30)
-  // );
   const pins = Object.values(state.entities.pins)
-  debugger;
+  // debugger;
   return { currentUserId, pins };
 };
 

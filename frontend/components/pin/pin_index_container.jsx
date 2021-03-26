@@ -5,7 +5,7 @@ import { fetchPins } from "../../actions/pin_actions";
 import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps =(state, ownProps) => {
-debugger;
+// debugger;
   return {
     page: ownProps.page,
     pins: ownProps.pins,

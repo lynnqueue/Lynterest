@@ -81,7 +81,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -117,7 +117,7 @@
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -144,7 +144,7 @@
   min-height: 40px;
   max-height: 90vh;
   border: 1px solid;
-  box-shadow: 0 3px 6px rgba(0,0,0,.18);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
   outline: none;
   border-radius: 8px;
   box-sizing: border-box;
@@ -174,7 +174,7 @@
     hyphens: auto;
     word-wrap: break-word;
     font-weight: 700;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
@@ -208,7 +208,7 @@ ul.create-pin.board-list {
 
 .board-li.pin-photo-frame {
   position: relative;
-  margin: 4px 8px 4px 12px; 
+  margin: 4px 8px 4px 12px;
   width: 36px;
   height: 36px;
   box-sizing: border-box;
@@ -226,7 +226,7 @@ ul.create-pin.board-list {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.03);
+    background: rgba(0, 0, 0, 0.03);
   }
 }
 
@@ -245,22 +245,9 @@ ul.create-pin.board-list {
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-.board-li.secret-icon-container {
-  margin: 0 20px;
-  display: flex;
-  align-items: center;
-  & > .secret-icon {
-    color: #333;
-    fill: currentColor;
-    vertical-align: middle;
-    height: 16px;
-    width: 16px;
-  }
 }
 
 .create-pin#content {
@@ -321,7 +308,7 @@ ul.create-pin.board-list {
 }
 
 .create-pin#delete-image-button {
-  cursor: pointer;  
+  cursor: pointer;
   border: 0px;
   height: 48px;
   width: 48px;
@@ -394,7 +381,7 @@ ul.create-pin.board-list {
   text-align: center;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
 }
 
 .create-pin#upload-recommendation {
@@ -410,7 +397,7 @@ ul.create-pin.board-list {
   text-align: center;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
 }
 
 .create-pin#image-upload-input {
@@ -430,7 +417,7 @@ ul.create-pin.board-list {
 .create-pin#title-container {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 32px
+  margin-top: 32px;
 }
 
 .create-pin#title {
@@ -446,7 +433,7 @@ ul.create-pin.board-list {
   box-sizing: border-box;
   caret-color: #333;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   overflow: auto;
   word-wrap: break-word;
   resize: none;
@@ -454,7 +441,7 @@ ul.create-pin.board-list {
   width: 100%;
   &:focus {
     color: #333;
-    border-bottom: 2px #5E9ED6 solid;
+    border-bottom: 2px #5e9ed6 solid;
   }
 }
 
@@ -500,7 +487,7 @@ ul.create-pin.board-list {
   text-overflow: ellipsis;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
 }
 
 .create-pin#description-container {
@@ -521,7 +508,7 @@ ul.create-pin.board-list {
   box-sizing: border-box;
   caret-color: #333;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   overflow: auto;
   word-wrap: break-word;
   resize: none;
@@ -529,7 +516,7 @@ ul.create-pin.board-list {
   width: 100%;
   &:focus {
     color: #333;
-    border-bottom: 2px #5E9ED6 solid;
+    border-bottom: 2px #5e9ed6 solid;
   }
 }
 
@@ -551,7 +538,7 @@ ul.create-pin.board-list {
   box-sizing: border-box;
   caret-color: #333;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   overflow: auto;
   word-wrap: break-word;
   resize: none;
@@ -559,11 +546,9 @@ ul.create-pin.board-list {
   width: 100%;
   &:focus {
     color: #333;
-    border-bottom: 2px #5E9ED6 solid;
+    border-bottom: 2px #5e9ed6 solid;
   }
 }
-
-
 
 ////////////////////////////////////////////////////////////////////
 //////////////////////////// PIN INDEX /////////////////////////////
@@ -611,14 +596,14 @@ ul.create-pin.board-list {
   }
   @media (max-width: 3527px) and (min-width: 3276px) {
     width: 3276px;
-  } 
+  }
 }
 
 .pin-index#grid {
   width: 100%;
   min-width: 550px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(252px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
   grid-row-gap: 10px;
   grid-auto-rows: 2px;
   justify-items: center;
@@ -643,7 +628,7 @@ ul.create-pin.board-list {
   overflow: hidden;
   position: relative;
   &:hover .overlay {
-    background-color: rgba(0,0,0,0.06);
+    background-color: rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -653,7 +638,7 @@ ul.create-pin.board-list {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.03);
+  background-color: rgba(0, 0, 0, 0.03);
   pointer-events: none;
 }
 
@@ -680,7 +665,7 @@ ul.create-pin.board-list {
     color: #333;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
@@ -728,7 +713,7 @@ ul.create-pin.board-list {
   border: 0;
   outline: 0;
   padding: 0;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   &:hover {
     background-color: rgb(255, 255, 255);
@@ -750,9 +735,9 @@ ul.create-pin.board-list {
   box-sizing: border-box;
   border-radius: 22px;
   cursor: pointer;
-  background-color: rgba(230,0,35,0.9);
+  background-color: rgba(230, 0, 35, 0.9);
   &:hover {
-    background-color: rgb(230,0,35);
+    background-color: rgb(230, 0, 35);
   }
   & > .save-board-pin-text {
     text-align: left;
@@ -761,7 +746,7 @@ ul.create-pin.board-list {
     hyphens: auto;
     word-wrap: break-word;
     font-weight: 600;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
@@ -774,12 +759,12 @@ ul.create-pin.board-list {
   max-width: 132px;
   box-sizing: border-box;
   border-radius: 18px;
-  color: rgb(51,51,51);
+  color: rgb(51, 51, 51);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   &:hover {
     background-color: rgb(255, 255, 255);
   }
@@ -807,15 +792,13 @@ ul.create-pin.board-list {
     hyphens: auto;
     word-wrap: break-word;
     font-weight: 700;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
     color: #333;
   }
 }
-
-
 
 ////////////////////////////////////////////////////////////////////
 ///////////////////////////// PIN SHOW /////////////////////////////
@@ -857,7 +840,7 @@ ul.create-pin.board-list {
     visibility: hidden;
   }
   &:hover {
-    background-color: rgb(226,226,226);
+    background-color: rgb(226, 226, 226);
   }
   & > .back-icon {
     color: #333;
@@ -879,7 +862,7 @@ ul.create-pin.board-list {
 .pin-show.container {
   cursor: auto;
   background-color: #fff;
-  box-shadow: rgba(0,0,0,0.1) 0 1px 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 20px 0;
   box-sizing: border-box;
   border-radius: 32px;
   position: relative;
@@ -922,7 +905,7 @@ ul.create-pin.board-list {
   color: #333;
   &.url {
     &:hover + .overlay {
-      background: rgba(0,0,0,.4);
+      background: rgba(0, 0, 0, 0.4);
     }
   }
   & > .pin-photo {
@@ -938,7 +921,7 @@ ul.create-pin.board-list {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,.03);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .pin-show.second-half {
@@ -973,7 +956,7 @@ ul.create-pin.board-list {
   justify-content: center;
   align-items: center;
   &:hover {
-    background-color: rgb(226,226,226);
+    background-color: rgb(226, 226, 226);
   }
   & > .edit-pin-icon {
     color: #333;
@@ -1004,7 +987,7 @@ ul.create-pin.board-list {
     hyphens: auto;
     word-wrap: break-word;
     font-weight: 700;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
@@ -1027,7 +1010,7 @@ ul.create-pin.board-list {
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 21px;
@@ -1049,7 +1032,7 @@ ul.create-pin.board-list {
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -1064,7 +1047,7 @@ ul.create-pin.board-list {
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -1095,7 +1078,7 @@ ul.create-pin.board-list {
     width: 100%;
   }
   &:hover > .overlay {
-    background: rgba(0,0,0,.06);
+    background: rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -1112,7 +1095,7 @@ ul.create-pin.board-list {
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -1125,8 +1108,6 @@ ul.create-pin.board-list {
     }
   }
 }
-
-
 
 ////////////////////////////////////////////////////////////////////
 ///////////////////////////// EDIT PIN /////////////////////////////
@@ -1159,7 +1140,7 @@ ul.create-pin.board-list {
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -1185,7 +1166,7 @@ ul.create-pin.board-list {
     align-items: center;
     background: transparent;
     &:hover {
-      background-color: rgba(0,0,0,.06);
+      background-color: rgba(0, 0, 0, 0.06);
     }
     & > .cancel-icon {
       color: #8e8e8e;
@@ -1257,7 +1238,7 @@ ul.create-pin.board-list {
     hyphens: auto;
     word-wrap: break-word;
     font-weight: 400;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
@@ -1275,7 +1256,7 @@ ul.create-pin.board-list {
   & > .input {
     cursor: text;
     width: 100%;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
@@ -1315,7 +1296,7 @@ ul.create-pin.board-list {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.03);
+    background: rgba(0, 0, 0, 0.03);
     pointer-events: none;
   }
 }
@@ -1373,7 +1354,7 @@ ul.create-pin.board-list {
 .edit-pin.link-text {
   text-align: center;
   font-weight: 700;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -1385,9 +1366,6 @@ ul.create-pin.board-list {
     color: #fff;
   }
 }
-
-
-
 
 ////////////////////////////////////////////////////////////////////
 //////////////////////////// DELETE PIN ////////////////////////////
@@ -1424,7 +1402,7 @@ ul.create-pin.board-list {
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -1449,7 +1427,7 @@ ul.create-pin.board-list {
     justify-content: center;
     align-items: center;
     &:hover {
-      background-color: rgba(0,0,0,0.06);
+      background-color: rgba(0, 0, 0, 0.06);
     }
     & > .cancel-icon {
       color: #8e8e8e;
@@ -1478,7 +1456,7 @@ ul.create-pin.board-list {
   hyphens: auto;
   word-wrap: break-word;
   font-weight: 400;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -1523,7 +1501,7 @@ ul.create-pin.board-list {
   & > .link-text {
     text-align: center;
     font-weight: 700;
-    letter-spacing: -.4px;
+    letter-spacing: -0.4px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
