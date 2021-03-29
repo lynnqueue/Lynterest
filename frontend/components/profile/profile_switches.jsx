@@ -4,7 +4,7 @@ import { Route, Link, NavLink } from "react-router-dom";
 const ProfileSwitches = ({ user, selectedSwitch, onSwitchClick, tabs }) => {
   const switches = tabs.map((tab, idx) => {
     const label = (idx === 0) ? "Boards" : "Pins";
-
+    // debugger;
     return (idx === 0) ? (
       <NavLink
         key={idx}
