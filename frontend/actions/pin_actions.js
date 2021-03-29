@@ -28,11 +28,14 @@ const receivePinErrors = errors => ({
 });
 
 // thunk action creators
-export const fetchPins = () => dispatch => (
-  PinAPIUtil.fetchPins().then(
-    pins => dispatch(receivePins(pins))
+export const fetchPins = () => dispatch => {
+  debugger;
+  return (
+    PinAPIUtil.fetchPins().then(
+      pins => dispatch(receivePins(pins))
+    )
   )
-);
+};
 
 export const fetchPin = pinId => dispatch => (
   PinAPIUtil.fetchPin(pinId).then(
