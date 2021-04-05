@@ -25,6 +25,7 @@ class ProfileContent extends React.Component {
     const userBoards = boards.filter(board => board.userId === user.id);
     const userPins = pins.filter(pin => pin.userId === user.id);
 
+    debugger;
     const contentTabs = [
       <BoardIndexContainer user={user} boards={userBoards} />,
       <PinIndexContainer pins={userPins} page='profile' />
@@ -58,11 +59,3 @@ class ProfileContent extends React.Component {
 }
 
 export default ProfileContent;
-
-// ProfileContent.defaultProps = {
-//   user: {
-//     username: '',
-//     firstName: '',
-//     lastName: ''
-//   }
-// }
