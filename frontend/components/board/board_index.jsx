@@ -37,12 +37,13 @@ class BoardIndex extends Component {
         )
       })
     ) : (
-      null // swap with add button using newBoard
+      null
     );
 
     return (
       <div className="board-index">
         {boardIndexItems}
+        {/* <div className="board-index-item filler"></div>
         <div className="board-index-item filler"></div>
         <div className="board-index-item filler"></div>
         <div className="board-index-item filler"></div>
@@ -53,8 +54,7 @@ class BoardIndex extends Component {
         <div className="board-index-item filler"></div>
         <div className="board-index-item filler"></div>
         <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
+        <div className="board-index-item filler"></div> */}
       </div>
     )
   }

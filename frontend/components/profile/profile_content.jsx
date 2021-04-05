@@ -25,7 +25,7 @@ class ProfileContent extends React.Component {
     const userBoards = boards.filter(board => board.userId === user.id);
     const userPins = pins.filter(pin => pin.userId === user.id);
 
-    debugger;
+    // debugger;
     const contentTabs = [
       <BoardIndexContainer user={user} boards={userBoards} />,
       <PinIndexContainer pins={userPins} page='profile' />
