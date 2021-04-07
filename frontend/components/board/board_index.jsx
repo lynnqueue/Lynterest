@@ -25,6 +25,7 @@ class BoardIndex extends Component {
         const previewPins = prevPinIds.map((pinId) => {
           return pins[pinId];
         });
+        debugger;
         return (
           <BoardIndexItem
             key={board.id}
@@ -39,7 +40,7 @@ class BoardIndex extends Component {
     ) : (
       null
     );
-
+      debugger;
     return (
       <div className="board-index">
         {boardIndexItems}
