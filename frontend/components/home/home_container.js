@@ -14,9 +14,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchPins: () => dispatch(fetchPins()),
-  // fetchAllBoardsPins: () => dispatch(fetchAllBoardsPins()),
-  // fetchSingleUser: id => dispatch(fetchSingleUser(id))
+  fetchPins: () => dispatch(fetchPins())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

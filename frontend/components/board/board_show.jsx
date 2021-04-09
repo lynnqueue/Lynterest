@@ -67,11 +67,11 @@ export default class BoardShow extends Component {
   }
 }
 
-BoardShow.defaultProps = {
-  board: {
-    id: 0,
-    title: 'boardman',
-    description: 'boardman gets paid',
-    pinIds: []
-  }
-}
+// BoardShow.defaultProps = {
+//   board: {
+//     id: 0,
+//     title: 'boardman',
+//     description: 'boardman gets paid',
+//     pinIds: []
+//   }
+// }

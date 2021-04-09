@@ -23,8 +23,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchSingleUser: id => dispatch(fetchSingleUser(id)),
-  // fetchBoards: () => dispatch(fetchBoards()),
-  // fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   openEditBoard: boardId => dispatch(openModal('edit-board', boardId)),
   closeModal: () => dispatch(closeModal())
 });
