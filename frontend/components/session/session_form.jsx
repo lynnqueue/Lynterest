@@ -50,24 +50,24 @@ class SessionForm extends React.Component {
     document.getElementById("demo-login").disabled = true;
   }
 
-  // _autoInput(field, text, callback) {
-  //   const inputChars = text.split("");
+  _autoInput(field, text, callback) {
+    const inputChars = text.split("");
     
-  //   const _addChar = (chars) => {
-  //     if (chars.length > 0) {
-  //       let char = chars.shift();
-  //       let currentInput = this.state[field];
-  //       this.setState(
-  //         { [field]: (currentInput + char) },
-  //         () => setTimeout(() => { _addChar(chars) }, 50)
-  //       )
-  //     } else {
-  //       callback()
-  //     }
-  //   }
+    const _addChar = (chars) => {
+      if (chars.length > 0) {
+        let char = chars.shift();
+        let currentInput = this.state[field];
+        this.setState(
+          { [field]: (currentInput + char) },
+          () => setTimeout(() => { _addChar(chars) }, 50)
+        )
+      } else {
+        callback()
+      }
+    }
     
-  //   _addChar(inputChars);
-  // }
+    _addChar(inputChars);
+  }
 
   renderErrors() {
     return (
