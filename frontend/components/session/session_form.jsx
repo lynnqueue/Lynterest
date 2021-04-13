@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-    // this._autoInput = this._autoInput.bind(this);
+    this._autoInput = this._autoInput.bind(this);
   }
   
   changeInput(field) {
