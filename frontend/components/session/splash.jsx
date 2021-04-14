@@ -15,8 +15,4 @@ const mapStateToProps = state => ({
   pins: Object.values(state.entities.pins).slice(180, 220),
 })
 
-// const mapDispatchToProps = dispatch => ({
-  
-// })
-
 export default connect(mapStateToProps, null)(Splash);

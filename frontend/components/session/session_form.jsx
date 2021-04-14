@@ -97,7 +97,6 @@ class SessionForm extends React.Component {
         <div className="session-form-page">
           <div className="session-form-container">
             <div className="session-form-content">
-              {/* <i className="fab fa-pinterest" id="session-form-icon"></i> */}
               <img src={window.logoUrl} alt="lynterest-logo" id="session-form-icon"/>
               <div className="session-form-title">
                 <h3>Welcome to Lynterest</h3>
@@ -110,9 +109,6 @@ class SessionForm extends React.Component {
                 {this.renderErrors()}
                 <br />
                 <div className="session-form">
-                  <div>
-
-                  </div>
                   <label>
                     <input
                       type="text"
