@@ -14,7 +14,6 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-    this._autoInput = this._autoInput.bind(this);
   }
   
   changeInput(field) {
@@ -28,45 +27,17 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state)
     this.props.processForm(user)
       .then(this.props.closeModal)
-      .then(() => location.reload(true))
+      // .then(() => location.reload(true))
   }
 
   handleDemo(e) {
     e.preventDefault();
 
-    this.setState({
+    const user = {
       email: 'd_ocean@gmail.com',
       password: '123456'
-    }, () => {
-            const user = Object.assign({}, this.state);
-            this.props.processForm(user).then(() => this.props.closeModal());
-        })
-  }
-
-  _disableInputs() {
-    document.getElementById("email").disabled = true;
-    document.getElementById("password").disabled = true;
-    document.getElementById("form-action").disabled = true;
-    document.getElementById("demo-login").disabled = true;
-  }
-
-  _autoInput(field, text, callback) {
-    const inputChars = text.split("");
-    
-    const _addChar = (chars) => {
-      if (chars.length > 0) {
-        let char = chars.shift();
-        let currentInput = this.state[field];
-        this.setState(
-          { [field]: (currentInput + char) },
-          () => setTimeout(() => { _addChar(chars) }, 50)
-        )
-      } else {
-        callback()
-      }
     }
-    
-    _addChar(inputChars);
+    this.props.demoUser(user).then(() => this.props.closeModal());
   }
 
   renderErrors() {
