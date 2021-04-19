@@ -7,6 +7,7 @@ import { fetchAllUsers, fetchSingleUser } from "../../actions/user_actions";
 
 const mapStateToProps = state => ({
   currentUser: state.entities.users[state.session.id],
+  currentUserId: state.session.id
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -44,18 +44,6 @@ class BoardIndex extends Component {
     return (
       <div className="board-index">
         {boardIndexItems}
-        {/* <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div>
-        <div className="board-index-item filler"></div> */}
       </div>
     )
   }
