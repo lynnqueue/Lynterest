@@ -16,7 +16,7 @@ class Search extends React.Component {
           <i className="fas fa-search" id="search-icon"></i>
         </div>
         <div className="search-input-container">
-          <input className="search-input" type="text" placeholder="Search Function In Progress" />
+          <input className="search-input" type="text" placeholder="Search" />
         </div>
       </div>
     )

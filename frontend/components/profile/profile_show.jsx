@@ -10,7 +10,6 @@ class ProfileShow extends React.Component {
   }
 
   componentDidMount() {
-debugger;
     const username = this.props.match.params.username;
     const fetchUser = (userId) => this.props.fetchSingleUser(userId);
 
@@ -24,7 +23,6 @@ debugger;
   render() {
     const { currentUser, users, username, boards, pins, openModal, closeModal } = this.props;
     const user = users.find(user => user.username === username);
-  debugger;
     return (
       <div id="profile-background">
         <div id="profile-container">

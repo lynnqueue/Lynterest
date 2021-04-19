@@ -6,8 +6,6 @@ import { openModal, closeModal } from "../../actions/modal_actions";
 import ProfileShow from "./profile_show";
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
-  debugger
   return ({
     currentUser: state.entities.users[state.session.id],
     users: Object.values(state.entities.users),

@@ -9,7 +9,6 @@ import { fetchPins } from '../../actions/pin_actions';
 const mapStateToProps = state => {
   const currentUserId = state.session.id;
   const pins = Object.values(state.entities.pins)
-  // debugger;
   return { currentUserId, pins };
 };
 

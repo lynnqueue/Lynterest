@@ -14,7 +14,6 @@ const ProfileDetails = ({ user }) => {
     <i className="fas fa-user-circle" id="profile-photo" style={{ "color": "#8e8e8e" }}></i>
   );
 
-  // debugger;
   return (
     <div id="profile-details-background">
       <div id="profile-details">

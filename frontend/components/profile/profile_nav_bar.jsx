@@ -37,7 +37,6 @@ class ProfileNavBar extends React.Component {
 
   toggleShow() {
     let that = this;
-    // debugger;
     this.setState({ showCreateOptions: !this.state.showCreateOptions })
   }
 

@@ -11,7 +11,6 @@ class ProfileContent extends React.Component {
     this.state = {
       selectedSwitch: (location.hash.endsWith('pins')) ? 1 : 0
     };
-debugger;
     this.selectSwitch = this.selectSwitch.bind(this);
   }
 
@@ -21,13 +20,9 @@ debugger;
 
   render() {
     const { user, boards, pins, openModal, closeModal } = this.props;
-    console.log("boards", boards, "pins", pins);
     const userBoards = boards.filter(board => board.user_id === user.id);
-  debugger;
-    console.log("userBoards", userBoards);
     const userPins = pins.filter(pin => pin.user_id === user.id);
 
-    debugger;
     const contentTabs = [
       <BoardIndexContainer user={user} boards={userBoards} />,
       <PinIndexContainer pins={userPins} page='profile' />

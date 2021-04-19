@@ -49,9 +49,7 @@ class EditProfileForm extends React.Component {
     for (let key in details) {
       formData.append(`user[${key}]`, details[key])
     }
-    // debugger;
     this.props.updateUser(formData, this.state.id)
-      .then(() => location.reload(false))
   }
 
   handleFile(e) {
@@ -116,9 +114,6 @@ class EditProfileForm extends React.Component {
                         <div className="edit-profile" id="title">
                           <h4 className="edit-profile" id="title-label">Edit Profile</h4>
                           <div className="edit-profile" id="title-spacing"></div>
-                          <div className="edit-profile" id="subtitle">
-                            People on Pinterest will get to know you with the info below
-                          </div>
                         </div>
                       </div>
                       <div className="edit-profile" id="buttons-container">
