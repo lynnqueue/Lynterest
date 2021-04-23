@@ -11,6 +11,7 @@ class CreateBoardPinForm extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     this.props.fetchBoards();
   }
 
