@@ -25,6 +25,7 @@ class CreateBoardPinForm extends React.Component {
   render() {
     const { currentUserId, pin, allBoards, closeModal } = this.props;
     const boards = allBoards.filter(board => board.userId === currentUserId);
+    debugger;
     const boardListItems = boards.map(board =>  {
       const firstPinPhoto = (board.firstPin !== undefined) ? (
         <img src={board.firstPin.photo} className="board-list-item photo" />
