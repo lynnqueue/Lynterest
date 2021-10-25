@@ -14,8 +14,8 @@ class ProfileShow extends React.Component {
     const fetchUser = (userId) => this.props.fetchSingleUser(userId);
 
     this.props.fetchAllUsers()
-      .then(res => {
-        const user = Object.values(res.users).find(user => user.username === username);
+      .then(payload => {
+        const user = Object.values(payload.users).find(user => user.username === username);
         return fetchUser(user.id);
       });
   }

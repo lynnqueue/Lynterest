@@ -8,6 +8,7 @@ class PinShow extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     this.props.fetchPin(this.props.match.params.pinId);
   }
 
@@ -19,10 +20,10 @@ class PinShow extends React.Component {
 
   render() {
     const { pin, users, currentUserId, openEditPin, openNewBoardPin } = this.props;
-    if (!pin) return <div style={{"paddingTop": "65px"}}>Loading...</div>;
-
+    // if (!pin) return <div style={{"paddingTop": "65px"}}>Loading...</div>;
+    debugger;
     const pinOwner = pin.user || {username: ""};
-    const pinOwnerFullName = `${pinOwner.firstName} ${pinOwner.lastName}`;
+    const pinOwnerName = `${pinOwner.username}`;
     const imgLink = (pin.url === "") ? (
       <div
         className="pin-show pin-link"
@@ -61,7 +62,7 @@ class PinShow extends React.Component {
       <div className="pin-show source-link">
           <div>Uploaded by&nbsp;
             <Link to={`/${pinOwner.username}`}>
-              <strong>{pinOwnerFullName}</strong>
+              <strong>{pinOwnerName}</strong>
             </Link>
           </div>
       </div>
@@ -90,23 +91,17 @@ class PinShow extends React.Component {
     const name = (pinOwner.id === currentUserId) ? (
       "You"
     ) : (
-      {pinOwnerFullName}
+      {pinOwnerName}
     )
     const pinCreditText = (
       <div className="pin-show credit-summary">
-        <Link
-          to={`/${pinOwner.username}`}
-          className="pin-show credit-link"
-        >
-          <strong>{pinOwnerFullName}</strong>
-        </Link>
+        <div className="pin-show credit-link">
+          <strong>{pinOwnerName}</strong>
+        </div>
         <span>&nbsp;saved to&nbsp;</span>
-        <Link
-          to={`/${pinOwner.username}/${pin.boardTitle}`}
-          className="pin-show credit-link"
-        >
+        <div className="pin-show credit-link">
           <strong>{pin.boardTitle}</strong>
-        </Link>
+        </div>
       </div>
     );
     

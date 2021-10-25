@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,9 +57,7 @@ class SessionForm extends React.Component {
 
     const switchFormLink = (
       <a className="switch-form-link" onClick={switchForm} id="switch-form">
-        {formType === "Sign up" ? 
-        "Already a member? Log in" : 
-        "Not on Lynterest yet? Sign up"}
+        Already a member? Log in
       </a>
     );
 
@@ -128,4 +126,4 @@ class SessionForm extends React.Component {
   }
 };
 
-export default withRouter(SessionForm);
+export default withRouter(SignupForm);
