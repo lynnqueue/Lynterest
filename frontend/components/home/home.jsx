@@ -2,15 +2,12 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PinIndexContainer from "../pin/pin_index_container";
 
-const shuffle = require('shuffle-array');
+// const shuffle = require('shuffle-array');
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = this.props.pins;
-    // this.handleClick = this.handleClick.bind(this);
   }
-
 
   componentDidMount() {
     this.props.fetchPins();
@@ -26,14 +23,16 @@ class Home extends React.Component {
       klass = "";
       spacer = <div id="spacer"></div>;
     };
-
+    debugger;
     return (
       <div className={`home-container ${klass}`}>
         {spacer}
-        <PinIndexContainer
-          pins={pins}
-          page="home"
-        />
+        <div onLoad={this.spinner} >
+          <PinIndexContainer
+            pins={pins}
+            page="home"
+          />
+        </div>
       </div>
     )
   }

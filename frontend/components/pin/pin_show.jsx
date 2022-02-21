@@ -21,7 +21,6 @@ class PinShow extends React.Component {
   render() {
     const { pin, users, currentUserId, openEditPin, openNewBoardPin } = this.props;
     // if (!pin) return <div style={{"paddingTop": "65px"}}>Loading...</div>;
-    debugger;
     const pinOwner = pin.user || {username: ""};
     const pinOwnerName = `${pinOwner.username}`;
     const imgLink = (pin.url === "") ? (
@@ -104,7 +103,7 @@ class PinShow extends React.Component {
         </div>
       </div>
     );
-    
+    debugger;
     return (
       <div className="pin-show main-container"
         onClick={this.goBack}>

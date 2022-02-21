@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import React from "react";
-
 import { fetchAllUsers, fetchSingleUser } from "../../actions/user_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 import ProfileShow from "./profile_show";
 
 const mapStateToProps = (state, ownProps) => {
+  debugger;
   return ({
     currentUser: state.entities.users[state.session.id],
     users: Object.values(state.entities.users),
@@ -16,11 +16,14 @@ const mapStateToProps = (state, ownProps) => {
   })
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => {
+  debugger;
+  return({
   fetchAllUsers: () => dispatch(fetchAllUsers()),
   fetchSingleUser: id => dispatch(fetchSingleUser(id)),
   openModal: modal => dispatch(openModal(modal)),
   closeModal: () => dispatch(closeModal())
-});
+  })
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileShow);

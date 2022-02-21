@@ -9,8 +9,6 @@ import {
 import { ProtectedRoute, AuthRoute } from "../util/route_util";
 
 import Modal from "./modal/modal";
-import SignupFormContainer from "./session/signup_form_container";
-import LoginFormContainer from "./session/login_form_container";
 import NavBarContainer from "./navbar/nav_bar_container";
 import CreatePinFormContainer from "./pin/form/create_pin_form_container";
 // import EditPinFormContainer from "./pin/form/edit_pin_form_container";

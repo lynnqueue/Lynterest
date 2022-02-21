@@ -64,7 +64,7 @@ class PinIndexItem extends React.Component {
         </div>
       </a>
     ) : null;
-    
+    // debugger;
     return (
       <div id={`${this.state.id}`} className="pin-index-item container">
         <div className="pin-index-item masonry-item">

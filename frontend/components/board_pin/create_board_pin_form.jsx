@@ -9,8 +9,9 @@ class CreateBoardPinForm extends React.Component {
     };
     this.handleSave = this.handleSave.bind(this);
   }
-
+  
   componentDidMount() {
+    debugger;
     this.props.fetchBoards();
   }
 
@@ -50,6 +51,7 @@ class CreateBoardPinForm extends React.Component {
       )
     })
 
+    debugger; 
     return (
       <div className="create-board-pin container">
         <div className="create-board-pin header">

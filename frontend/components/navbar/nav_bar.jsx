@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import SearchContainer from "../search/search_container";
+import Search from "../search/search";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class NavBar extends React.Component {
             </div>
 
             <div className="nav-bar-search-container" id="search">
-              <SearchContainer />
+              <Search />
             </div>
 
             <div className="right-nav-bar">

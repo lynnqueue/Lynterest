@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 
 import SignupFormContainer from "../session/signup_form_container";
 import LoginFormContainer from "../session/login_form_container";
-import SearchContainer from "../search/search_container";
 import CreateBoardFormContainer from "../board/form/create_board_form_container";
 import EditBoardFormContainer from "../board/form/edit_board_form_container";
 import DeleteBoardFormContainer from "../board/form/delete_board_form_container";
@@ -19,21 +18,17 @@ const Modal = ({ modal, openModal, closeModal }) => {
   let component, switchFormValue, altModal, clickBackground;
   switch (modal) {
     case "login":
-      switchFormValue = "Sign up";
+      // switchFormValue = "Sign up";
       altModal = "signup"
       component = <LoginFormContainer />;
       clickBackground = null;
       break;
     case "signup":
-      switchFormValue = "Log in";
+      // switchFormValue = "Log in";
       altModal = "login";
       component = <SignupFormContainer />;
       clickBackground = null;
       break;
-    // case "search":
-    //   component = <SearchContainer />;
-    //   clickBackground = closeModal;
-    //   break;
     case "new-board":
       component = <CreateBoardFormContainer />;
       clickBackground = closeModal;
@@ -62,22 +57,11 @@ const Modal = ({ modal, openModal, closeModal }) => {
       return null;
   };
 
-  const switchFormButton = (switchFormValue) ? (
-    <button className="switch-form-button" onClick={() => openModal(altModal)}>
-      <div className="switch-form-value">
-        {switchFormValue}
-      </div>
-    </button>
-  ) : null;
-
   return (
     <div className="modal-container">
       <div className="modal-background" id={modal} onClick={clickBackground}>
         <div className="modal-child" id={`${modal}-child`} onClick={e => e.stopPropagation()}>
           {component}
-        </div>
-        <div className="modal-child-two" onClick={e => e.stopPropagation()}>
-          {switchFormButton}
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import PinIndexItem from "./pin_index_item";
 
-const shuffle = require("shuffle-array");
-const masonryEvents = ["load", "resize"];
+// const shuffle = require("shuffle-array");
+// const masonryEvents = ["load", "resize"];
 
 class PinIndex extends React.Component {
   constructor(props) {
@@ -12,13 +12,14 @@ class PinIndex extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     this.props.fetchPins();
   }
 
   splitPins(pins) {
     const arr = [];
-    for (let i = 0; i < pins.length; i += 30) {
-      arr.push(pins.slice(i, i+30));
+    for (let i = 0; i < pins.length; i += 20) {
+      arr.push(pins.slice(i, i+20));
     }
     return arr;
   }
@@ -36,7 +37,7 @@ class PinIndex extends React.Component {
         openNewBoardPin={openNewBoardPin}
       />
     ));
-
+    debugger;
     return (
       <div className="pin-index container">
         <div className="pin-index" id="grid-container">
