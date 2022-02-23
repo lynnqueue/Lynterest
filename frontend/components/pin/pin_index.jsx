@@ -8,21 +8,21 @@ class PinIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.splitPins = this.splitPins.bind(this);
+    // this.splitPins = this.splitPins.bind(this);
   }
 
-  componentDidMount() {
-    debugger;
-    this.props.fetchPins();
-  }
+  // componentDidMount() {
+  //   // debugger;
+  //   this.props.fetchPins();
+  // }
 
-  splitPins(pins) {
-    const arr = [];
-    for (let i = 0; i < pins.length; i += 20) {
-      arr.push(pins.slice(i, i+20));
-    }
-    return arr;
-  }
+  // splitPins(pins) {
+  //   const arr = [];
+  //   for (let i = 0; i < pins.length; i += 20) {
+  //     arr.push(pins.slice(i, i+20));
+  //   }
+  //   return arr;
+  // }
 
   render() {
     const { page, pins, currentUserId, user, openEditPin, openNewBoardPin } = this.props;
@@ -37,7 +37,7 @@ class PinIndex extends React.Component {
         openNewBoardPin={openNewBoardPin}
       />
     ));
-    debugger;
+    // debugger;
     return (
       <div className="pin-index container">
         <div className="pin-index" id="grid-container">

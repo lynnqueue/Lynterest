@@ -27,7 +27,7 @@ class LoginForm extends React.Component {
     const user = Object.assign({}, this.state)
     this.props.processForm(user)
       .then(this.props.closeModal)
-      // .then(() => location.reload(true))
+      .then(() => location.reload(true))
   }
 
   handleDemo(e) {
@@ -37,7 +37,9 @@ class LoginForm extends React.Component {
       email: 'd_ocean@gmail.com',
       password: '123456'
     }
-    this.props.demoUser(user).then(() => this.props.closeModal());
+    this.props.demoUser(user)
+      .then(() => this.props.closeModal())
+      .then(() => location.reload(true))
   }
 
   renderErrors() {

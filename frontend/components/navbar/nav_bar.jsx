@@ -9,7 +9,7 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { currentUser, logout } = this.props;
+    const { currentUser, logout, render } = this.props;
 
     const profilePhoto = (currentUser.photo) ? (
       <img src={currentUser.photo} alt="profile-pic" id="profile-icon" />
@@ -17,7 +17,7 @@ class NavBar extends React.Component {
       <i className="fas fa-user-circle" id="profile-icon" style={{"color": "#8e8e8e"}}></i>
     );
     
-    if (currentUser && (this.props.currentUserId !== undefined)) { 
+    if (render) { 
       return (
       <div className="nav-bar-background">
         <div className="nav-bar-wrapper">

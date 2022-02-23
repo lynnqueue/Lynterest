@@ -78,7 +78,7 @@ class PinIndexItem extends React.Component {
           <div className="pin-index-item links">
             <div className="pin-index-item edit-pin-link-container">{editPinLink}</div>
             <div className="save-board-pin-link-container">{openBoardPinLink}</div>
-            <div className="pin-index-item pin-link-container">{pinLink}</div>
+            {/* <div className="pin-index-item pin-link-container">{pinLink}</div> */}
           </div>
         </div>
         {pinTitle}

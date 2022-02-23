@@ -20,8 +20,8 @@ class ProfileContent extends React.Component {
 
   render() {
     const { user, boards, pins, openModal, closeModal } = this.props;
-    const userBoards = boards.filter(board => board.user_id === user.id);
-    const userPins = pins.filter(pin => pin.user_id === user.id);
+    const userBoards = boards.filter(board => board.userId === user.id);
+    const userPins = pins.filter(pin => pin.userId === user.id);
 
     const contentTabs = [
       <BoardIndexContainer user={user} boards={userBoards} />,
