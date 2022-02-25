@@ -1513,3 +1513,17 @@ ul.create-pin.board-list {
     }
   }
 }
+
+.loader {
+  animation: rotate 3s infinite;
+  align-items: center;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import PinIndexItem from "./pin_index_item";
-
 // const shuffle = require("shuffle-array");
 // const masonryEvents = ["load", "resize"];
 
@@ -38,15 +37,23 @@ class PinIndex extends React.Component {
       />
     ));
     // debugger;
-    return (
-      <div className="pin-index container">
-        <div className="pin-index" id="grid-container">
-          <div className="pin-index masonry" id="grid">
-            {pinIndexItems}
+    if (pinIndexItems.length) {
+      return (
+        <div className="pin-index container">
+          <div className="pin-index" id="grid-container">
+            <div className="pin-index masonry" id="grid">
+              {pinIndexItems}
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <i className="fa fa-spinner loader" aria-hidden="true"></i>
+        </div>
+      )
+    };
   };
 };
 
