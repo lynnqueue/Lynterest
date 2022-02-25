@@ -9,7 +9,6 @@ export const openModal = (modal, objectId) => {
   };
 };
 
-// reset modal slice of state to null
 export const closeModal = () => {
   return {
     type: CLOSE_MODAL

@@ -21,9 +21,7 @@ class PinShow extends React.Component {
   render() {
     const { pin, users, currentUserId, openEditPin, openNewBoardPin } = this.props;
     // if (!pin) return <div style={{"paddingTop": "65px"}}>Loading...</div>;
-    const pinOwner = pin.user || {username: ""};
-    const pinOwnerName = `${pinOwner.username}`;
-    
+    const pinOwner = pin.user || {username: ""};    
     const editPinLink = (pin.userId === currentUserId) ? (
       <a
         className="pin-show edit-pin-link"
@@ -49,7 +47,7 @@ class PinShow extends React.Component {
     const pinCreditText = (
       <div className="pin-show credit-summary">
         <div className="pin-show credit-link">
-          <strong>{pinOwnerName}</strong>
+          <strong>{`${pinOwner.username}`}</strong>
         </div>
         <span>&nbsp;saved to&nbsp;</span>
         <div className="pin-show credit-link">
@@ -82,7 +80,6 @@ class PinShow extends React.Component {
             <div className="pin-show second-half">
               <div className="pin-show nav-bar">
                 {editPinLink}
-                <div></div>
                 <a
                   className="pin-show save-board-pin-link"
                   onClick={() => openNewBoardPin(pin.id)}
@@ -94,7 +91,7 @@ class PinShow extends React.Component {
                 <div className="pin-show source-link">
                     <div>Uploaded by&nbsp;
                       <Link to={`/${pinOwner.username}`}>
-                        <strong>{pinOwnerName}</strong>
+                        <strong>{`${pinOwner.username}`}</strong>
                       </Link>
                     </div>
                 </div>

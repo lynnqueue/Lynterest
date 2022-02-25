@@ -54,16 +54,16 @@ class PinIndexItem extends React.Component {
       </a>
     );
 
-    const pinUrl = pin.url;
-    const shortPinUrl = pinUrl.slice(12, 22) + "...";
-    const pinLink = (pinUrl !== '') ? (
-      <a href={`${pinUrl}`} target="_blank" className="pin-index-item pin-link">
-        <i className="fas fa-external-link-alt pin-link-icon"></i>
-        <div className="pin-index-item pin-link-text">
-          {shortPinUrl}
-        </div>
-      </a>
-    ) : null;
+    // const pinUrl = pin.url;
+    // const shortPinUrl = pinUrl.slice(12, 22) + "...";
+    // const pinLink = (pinUrl !== '') ? (
+    //   <a href={`${pinUrl}`} target="_blank" className="pin-index-item pin-link">
+    //     <i className="fas fa-external-link-alt pin-link-icon"></i>
+    //     <div className="pin-index-item pin-link-text">
+    //       {shortPinUrl}
+    //     </div>
+    //   </a>
+    // ) : null;
     // debugger;
     return (
       <div id={`${this.state.id}`} className="pin-index-item container">
