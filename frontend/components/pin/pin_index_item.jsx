@@ -13,7 +13,8 @@ class PinIndexItem extends React.Component {
   }
 
   resizeGridItem() {
-    let item = document.getElementById(this.state.id);
+    const id = this.props.key;
+    let item = document.getElementById(id);
     let grid = document.getElementById('grid');
     let rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
     let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
@@ -54,19 +55,8 @@ class PinIndexItem extends React.Component {
       </a>
     );
 
-    // const pinUrl = pin.url;
-    // const shortPinUrl = pinUrl.slice(12, 22) + "...";
-    // const pinLink = (pinUrl !== '') ? (
-    //   <a href={`${pinUrl}`} target="_blank" className="pin-index-item pin-link">
-    //     <i className="fas fa-external-link-alt pin-link-icon"></i>
-    //     <div className="pin-index-item pin-link-text">
-    //       {shortPinUrl}
-    //     </div>
-    //   </a>
-    // ) : null;
-    // debugger;
     return (
-      <div id={`${this.state.id}`} className="pin-index-item container">
+      <div id={pin.id} className="pin-index-item container">
         <div className="pin-index-item masonry-item">
           <Link
             to={`/pin/${pin.id}`}
@@ -78,7 +68,6 @@ class PinIndexItem extends React.Component {
           <div className="pin-index-item links">
             <div className="pin-index-item edit-pin-link-container">{editPinLink}</div>
             <div className="save-board-pin-link-container">{openBoardPinLink}</div>
-            {/* <div className="pin-index-item pin-link-container">{pinLink}</div> */}
           </div>
         </div>
         {pinTitle}

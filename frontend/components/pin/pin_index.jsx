@@ -6,22 +6,7 @@ import PinIndexItem from "./pin_index_item";
 class PinIndex extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.splitPins = this.splitPins.bind(this);
   }
-
-  // componentDidMount() {
-  //   // debugger;
-  //   this.props.fetchPins();
-  // }
-
-  // splitPins(pins) {
-  //   const arr = [];
-  //   for (let i = 0; i < pins.length; i += 20) {
-  //     arr.push(pins.slice(i, i+20));
-  //   }
-  //   return arr;
-  // }
 
   render() {
     const { page, pins, currentUserId, user, openEditPin, openNewBoardPin } = this.props;

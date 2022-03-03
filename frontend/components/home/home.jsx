@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import PinIndexContainer from "../pin/pin_index_container";
-
-// const shuffle = require('shuffle-array');
 
 class Home extends React.Component {
   constructor(props) {
@@ -27,12 +24,10 @@ class Home extends React.Component {
     return (
       <div className={`home-container ${klass}`}>
         {spacer}
-        <div onLoad={this.spinner} >
           <PinIndexContainer
             pins={pins}
             page="home"
           />
-        </div>
       </div>
     )
   }

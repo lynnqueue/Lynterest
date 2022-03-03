@@ -7,14 +7,11 @@ import { createBoardPin } from "../../actions/board_pin_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = state => {
-  const currentUserId = state.session.id;
-  const pin = state.entities.pins[state.ui.objectId];
-  const allBoards = Object.values(state.entities.boards);
 // debugger;
   return {
-    currentUserId,
-    pin,
-    allBoards,
+    currentUserId: state.session.id,
+    pin: state.entities.pins[state.ui.objectId],
+    allBoards: Object.values(state.entities.boards),
   };
 };
 
