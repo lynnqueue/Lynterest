@@ -13,8 +13,7 @@ class PinIndexItem extends React.Component {
   }
 
   resizeGridItem() {
-    const id = this.props.key;
-    let item = document.getElementById(id);
+    let item = document.getElementById(this.state.id);
     let grid = document.getElementById('grid');
     let rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
     let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
@@ -56,7 +55,7 @@ class PinIndexItem extends React.Component {
     );
 
     return (
-      <div id={pin.id} className="pin-index-item container">
+      <div id={`${this.state.id}`} className="pin-index-item container">
         <div className="pin-index-item masonry-item">
           <Link
             to={`/pin/${pin.id}`}
