@@ -56,7 +56,6 @@ const Modal = ({ modal, openModal, closeModal }) => {
     default:
       return null;
   };
-// debugger;
   return (
     <div className="modal-container">
       <div className="modal-background" id={modal} onClick={clickBackground}>
@@ -70,7 +69,6 @@ const Modal = ({ modal, openModal, closeModal }) => {
 };
 
 const mapStateToProps = state => {
-  // debugger;
   return {
     modal: state.ui.modal
   };

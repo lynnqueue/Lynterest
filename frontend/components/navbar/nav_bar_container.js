@@ -6,7 +6,6 @@ import { logout } from "../../actions/session_actions";
 import { fetchAllUsers, fetchSingleUser } from "../../actions/user_actions";
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
   const render = 
     ownProps.location.pathname !== "/login" &&
     ownProps.location.pathname !== "/signup";

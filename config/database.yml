@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: Lynterest_production
-  username: Lynterest
-  password: <%= ENV['LYNTEREST_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

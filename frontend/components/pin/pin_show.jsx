@@ -7,7 +7,6 @@ class PinShow extends React.Component {
   }
 
   componentDidMount() {
-    // debugger;
     this.props.fetchPin(this.props.match.params.pinId); //NTS: Is this necessary since pin is already in props??
   }
 

@@ -5,7 +5,6 @@ import { RECEIVE_ALL_USERS, RECEIVE_SINGLE_USER } from "../actions/user_actions"
 const UsersReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let nextState = Object.assign({}, oldState);
-// debugger;
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return Object.assign(nextState, { [action.currentUser.id]: action.currentUser });

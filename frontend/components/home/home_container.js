@@ -10,7 +10,6 @@ const mapStateToProps = state => {
   ) : (
     allPins
   );
-  // debugger;
   return { currentUserId, pins };
 };
 

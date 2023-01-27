@@ -21,7 +21,6 @@ class PinIndex extends React.Component {
         openNewBoardPin={openNewBoardPin}
       />
     ));
-    // debugger;
     if (pinIndexItems.length) {
       return (
         <div className="pin-index container">

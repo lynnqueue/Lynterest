@@ -40,5 +40,7 @@ Rails.application.routes.draw do
     resources :boards_pins, only: [:create, :index, :destroy]
   end
 
+  get '*path', to: "static_pages#frontend_index"
+  
   root to: "static_pages#root"
 end

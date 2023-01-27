@@ -3,7 +3,6 @@ import PinIndex from "./pin_index";
 import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps =(state, ownProps) => {
-  // debugger;
   return {
     page: ownProps.page,
     pins: ownProps.pins,

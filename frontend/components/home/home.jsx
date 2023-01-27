@@ -20,7 +20,6 @@ class Home extends React.Component {
       klass = "";
       spacer = <div id="spacer"></div>;
     };
-    // debugger;
     return (
       <div className={`home-container ${klass}`}>
         {spacer}
